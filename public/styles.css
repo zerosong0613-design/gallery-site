@@ -96,6 +96,8 @@ body {
   letter-spacing: -0.01em;
 }
 
+.masthead h1 a { color: inherit; text-decoration: none; }
+
 .masthead p {
   margin: var(--sp-1) 0 0;
   color: var(--ink-2);
