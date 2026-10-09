@@ -1,0 +1,16 @@
+{
+  "name": "seoul-exhibitions",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "collect": "node --env-file-if-exists=.env scripts/collect.mjs",
+    "probe": "node --env-file-if-exists=.env scripts/probe.mjs"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.1",
+    "fast-xml-parser": "^4.5.0"
+  }
+}

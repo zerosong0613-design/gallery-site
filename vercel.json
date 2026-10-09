@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": "public",
+  "regions": ["icn1"],
+  "functions": {
+    "api/collect.js": { "maxDuration": 120 }
+  },
+  "crons": [
+    { "path": "/api/collect", "schedule": "0 20 * * *" }
+  ]
+}
