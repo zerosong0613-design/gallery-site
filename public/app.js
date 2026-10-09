@@ -1,5 +1,4 @@
-const SOON_DAYS = 7;
-const DAY_MS = 86_400_000;
+import { SOON_DAYS, detailHref, dotted, escapeHtml, hasAmount, leftLabel, loadExhibitions, priceParts } from './common.js';
 
 const FILTERS = [
   { id: 'now', label: '진행 중', test: (e) => !e.upcoming },
@@ -14,19 +13,8 @@ let exhibitions = [];
 
 const $ = (id) => document.getElementById(id);
 
-// 사용자 시간대와 무관하게 서울 날짜를 쓴다.
-function seoulToday() {
-  return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul' }).format(new Date());
-}
-
-const daysBetween = (from, to) => Math.round((Date.parse(to) - Date.parse(from)) / DAY_MS);
-const dotted = (iso) => iso.replaceAll('-', '.');
 // 같은 해에 끝나면 종료일의 연도를 생략한다.
 const period = (start, end) => `${dotted(start)} – ${dotted(start.slice(0, 4) === end.slice(0, 4) ? end.slice(5) : end)}`;
-
-function escapeHtml(text) {
-  return text.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
-}
 
 function haversineKm(a, b) {
   const rad = (deg) => (deg * Math.PI) / 180;
@@ -38,26 +26,15 @@ function haversineKm(a, b) {
 
 const formatKm = (km) => (km < 1 ? `${Math.round(km * 100) * 10}m` : `${km.toFixed(1)}km`);
 
-function leftLabel(e) {
-  if (e.upcoming) return { text: `${e.daysToStart}일 뒤 시작`, soon: false };
-  if (e.isPermanent) return { text: '상설', soon: false };
-  if (e.daysLeft === 0) return { text: '오늘 종료', soon: true };
-  return { text: `${e.daysLeft}일 남음`, soon: e.daysLeft <= SOON_DAYS };
-}
-
-// 가격은 자유 텍스트다. '-', '미정', '홈페이지 참고' 같은 값은 정보 없음으로 본다.
 function priceHtml(e) {
-  const price = e.price.replace(/\s*\/\s*/g, ' · ');
-  if (!/\d/.test(price) && !e.isFree) return '<span class="unknown">기관 홈페이지에서 확인</span>';
-  if (e.isFree && !/\d/.test(price)) return '<span class="free">무료</span>';
-  return `<span class="price">${e.isFree ? '<span class="free">무료</span> ' : ''}${escapeHtml(price)}</span>`;
+  if (!hasAmount(e)) return e.isFree ? '<span class="free">무료</span>' : '<span class="unknown">상세에서 확인</span>';
+  return `<span class="price">${e.isFree ? '<span class="free">무료</span> ' : ''}${escapeHtml(priceParts(e).join(' · '))}</span>`;
 }
 
 function cardHtml(e) {
   const left = leftLabel(e);
-  const href = e.sourceUrl || e.venue.url;
   const distance = e.km == null ? '' : ` · ${formatKm(e.km)}`;
-  const body = `
+  return `<li class="card"><a href="${detailHref(e)}">
     <div class="poster">
       <img src="${escapeHtml(e.thumbnail)}" alt="" loading="lazy" data-title="${escapeHtml(e.title)}">
       <span class="badge${left.soon ? ' soon' : ''}">${left.text}</span>
@@ -67,8 +44,7 @@ function cardHtml(e) {
     <dl class="facts">
       <dt>기간</dt><dd>${period(e.start, e.end)}</dd>
       <dt>관람료</dt><dd>${priceHtml(e)}</dd>
-    </dl>`;
-  return `<li class="card">${href ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener">${body}</a>` : body}</li>`;
+    </dl></a></li>`;
 }
 
 const SORTS = {
@@ -127,35 +103,19 @@ async function onSortChange(value) {
 }
 
 async function init() {
-  let data;
+  let loaded;
   try {
-    // 매일 갱신되는 수집본을 먼저 찾고, 없으면(로컬 개발, 첫 수집 전) 배포에 포함된 사본을 쓴다.
-    let res = await fetch('api/exhibitions').catch(() => null);
-    if (!res?.ok || !res.headers.get('content-type')?.includes('json')) res = await fetch('data/exhibitions.json');
-    if (!res.ok) throw new Error(res.status);
-    data = await res.json();
+    loaded = await loadExhibitions();
   } catch {
     $('summary').textContent = '전시 목록을 불러오지 못했어요. 잠시 뒤 새로고침해 주세요.';
     return;
   }
+  exhibitions = loaded.exhibitions;
 
-  const today = seoulToday();
-  const venues = new Map(data.venues.map((v) => [v.id, v]));
-  exhibitions = data.exhibitions
-    .filter((e) => e.end >= today)
-    .map((e) => ({
-      ...e,
-      venue: venues.get(e.venueId),
-      upcoming: e.start > today,
-      daysLeft: daysBetween(today, e.end),
-      daysToStart: daysBetween(today, e.start),
-      km: null,
-    }));
-
-  const [y, m, d] = today.split('-').map(Number);
+  const [y, m, d] = loaded.today.split('-').map(Number);
   const ongoing = exhibitions.filter((e) => !e.upcoming);
   $('summary').textContent = `${y}년 ${m}월 ${d}일, 서울에서 ${ongoing.length}개 전시가 열리고 있어요.`;
-  $('updated').textContent = `${dotted(data.updatedAt.slice(0, 10))} 수집.`;
+  $('updated').textContent = `${dotted(loaded.updatedAt.slice(0, 10))} 수집.`;
 
   const guCounts = new Map();
   for (const e of ongoing) guCounts.set(e.venue.sigungu, (guCounts.get(e.venue.sigungu) ?? 0) + 1);

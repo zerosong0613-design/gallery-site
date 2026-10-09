@@ -14,7 +14,8 @@ export async function GET() {
         'cache-control': 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400',
       },
     });
-  } catch {
+  } catch (err) {
+    console.error('exhibitions cache read failed:', err);
     return new Response('Not found', { status: 404 });
   }
 }

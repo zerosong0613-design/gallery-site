@@ -12,14 +12,16 @@ export async function GET(request) {
 
   try {
     const { from, to, failed, data } = await collect();
-    await put(CACHE_PATH, JSON.stringify(data), {
+    const blob = await put(CACHE_PATH, JSON.stringify(data), {
       access: 'public',
       addRandomSuffix: false,
       allowOverwrite: true,
       contentType: 'application/json; charset=utf-8',
       cacheControlMaxAge: 3600,
     });
-    return Response.json({ ok: true, from, to, exhibitions: data.exhibitions.length, venues: data.venues.length, detailFailed: failed });
+    const summary = { ok: true, from, to, exhibitions: data.exhibitions.length, venues: data.venues.length, detailFailed: failed };
+    console.log('collected', JSON.stringify(summary), blob.pathname);
+    return Response.json(summary);
   } catch (err) {
     console.error(err);
     // 실패하면 기존 Blob 을 그대로 둔다.

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T11:04:38.617Z",
+  "updatedAt": "2026-10-09T11:42:28.973Z",
   "venues": [
     {
       "id": "984",
@@ -635,7 +635,8 @@
       "isFree": true,
       "isPermanent": true,
       "sourceUrl": "https://www.museum.go.kr/MUSEUM/contents/M0201060100.do?showHallId=755&showroomCode=DM0078",
-      "phone": "국립중앙박물관 02-2077-9000"
+      "phone": "국립중앙박물관 02-2077-9000",
+      "description": ""
     },
     {
       "seq": "332063",
@@ -648,7 +649,8 @@
       "isFree": true,
       "isPermanent": true,
       "sourceUrl": "https://craftmuseum.seoul.go.kr/exhibit/plan/view/161",
-      "phone": "서울공예박물관 02-6450-7000"
+      "phone": "서울공예박물관 02-6450-7000",
+      "description": ""
     },
     {
       "seq": "339644",
@@ -661,7 +663,8 @@
       "isFree": true,
       "isPermanent": true,
       "sourceUrl": "https://sema.seoul.go.kr/kr/whatson/exhibition/detail?exNo=1431437",
-      "phone": "서울시립미술관 02-2124-8935"
+      "phone": "서울시립미술관 02-2124-8935",
+      "description": ""
     },
     {
       "seq": "366684",
@@ -674,7 +677,8 @@
       "isFree": true,
       "isPermanent": true,
       "sourceUrl": "https://www.jfac.or.kr/site/main/program/perf_exhi_list_view?pgIdx=2506",
-      "phone": "고희동미술관 02-741-8424"
+      "phone": "고희동미술관 02-741-8424",
+      "description": ""
     },
     {
       "seq": "366683",
@@ -687,7 +691,8 @@
       "isFree": false,
       "isPermanent": true,
       "sourceUrl": "https://www.jfac.or.kr/site/main/program/perf_exhi_list_view?pgIdx=2519",
-      "phone": "박노수미술관 02-2148-4171"
+      "phone": "박노수미술관 02-2148-4171",
+      "description": ""
     },
     {
       "seq": "371407",
@@ -699,8 +704,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=156371&amp;menuNo=200008",
-      "phone": "국립중앙박물관 02-2077-9000"
+      "sourceUrl": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=156371&menuNo=200008",
+      "phone": "국립중앙박물관 02-2077-9000",
+      "description": ""
     },
     {
       "seq": "371541",
@@ -712,8 +718,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://www.karts.ac.kr/nri/bbs/NuriBbsDetail.do?pageIndex=1&amp;bbsId=BBSNURI_001&amp;nttNo=9858818&amp;menuType=",
-      "phone": "[홈페이지 참고]"
+      "sourceUrl": "https://www.karts.ac.kr/nri/bbs/NuriBbsDetail.do?pageIndex=1&bbsId=BBSNURI_001&nttNo=9858818&menuType=",
+      "phone": "[홈페이지 참고]",
+      "description": ""
     },
     {
       "seq": "364986",
@@ -725,8 +732,9 @@
       "price": "미정",
       "isFree": false,
       "isPermanent": false,
-      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&amp;exhId=202601060002024",
-      "phone": "국립현대미술관 02‒3701‒9500"
+      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&exhId=202601060002024",
+      "phone": "국립현대미술관 02‒3701‒9500",
+      "description": "국립현대미술관 다원예술 «탐정의 시간»은 현대인이 일상에서 경험하는 시간의 복잡성을 “탐정”이란 존재와 “탐정의 깊은 사유”에 빗대어 탐구하는 프로젝트이다. 인공지능의 효율적인 시간과 대비되는 인간의 시간은 미세한 단서를 찾아 헤매고, 그 시간에 천착하며, 간혹은 명확한 해답에 도달하지 못하는 탐정의 사유와 닮아있다. 4월부터 12월까지 월별 프로그램으로 진행되며, 시간 자체에 대한 사유를 통해 인간 존재를 다시금 생각하고 감각해보고자 한다."
     },
     {
       "seq": "374617",
@@ -738,8 +746,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://sma.sbculture.or.kr/cml/exhibition/past.do?mode=view&amp;articleNo=53327",
-      "phone": "성북구립 최만린미술관 02-6952-5016"
+      "sourceUrl": "https://sma.sbculture.or.kr/cml/exhibition/past.do?mode=view&articleNo=53327",
+      "phone": "성북구립 최만린미술관 02-6952-5016",
+      "description": ""
     },
     {
       "seq": "376586",
@@ -752,7 +761,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://sema.seoul.go.kr/kr/whatson/exhibition/detail?exNo=1509709",
-      "phone": "서울시립미술관 02-2124-8868"
+      "phone": "서울시립미술관 02-2124-8868",
+      "description": ""
     },
     {
       "seq": "377100",
@@ -765,7 +775,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://sma.sbculture.or.kr/kcu/index.do",
-      "phone": "02-6906-3136"
+      "phone": "02-6906-3136",
+      "description": ""
     },
     {
       "seq": "364987",
@@ -777,8 +788,9 @@
       "price": "미정",
       "isFree": false,
       "isPermanent": false,
-      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&amp;exhId=202601060002025",
-      "phone": "국립현대미술관 02‒3701‒9500"
+      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&exhId=202601060002025",
+      "phone": "국립현대미술관 02‒3701‒9500",
+      "description": "서울관 영상관에서는 실험영화, 다큐멘터리, 예술영화 등 형식과 장르, 시대를 아우르는 폭넓은 상영 프로그램을 통해 관객에게 다양한 영상 문화를 경험할 수 있는 장을 마련한다. 2026년에는 미술관의 주요 기획전과 긴밀히 연결되는 전시 연계 프로그램, 서울국제실험영화페스티벌과 협력해 프랑스 실험영화 거장의 작품을 조명하는 특별 프로그램, 남미 여성 영화감독들의 작품을 중심으로 구성된 주제 기획 프로그램 등으로 연중 운영된다."
     },
     {
       "seq": "399975",
@@ -790,8 +802,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://www.molit.go.kr/molitum/USR/BORD0201/m_36961/DTL.jsp?id=um_6_1&amp;cate=&amp;mode=view&amp;idx=1319&amp;key=&amp;search=&amp;search_regdate_s=&amp;search_regdate_e=&amp;order=&amp;desc=asc&amp;srch_prc_stts=&amp;item_num=0&amp;search_dept_id=&amp;search_dept_nm=&amp;srch_usr_nm=N&amp;srch_usr_titl=N&amp;srch_usr_ctnt=N&amp;srch_mng_nm=N&amp;old_dept_nm=&amp;search_gbn=&amp;search_section=&amp;source=&amp;search1=&amp;lcmspage=1",
-      "phone": "국토발전전시관 02-3425-8900~1"
+      "sourceUrl": "https://www.molit.go.kr/molitum/USR/BORD0201/m_36961/DTL.jsp?id=um_6_1&cate=&mode=view&idx=1319&key=&search=&search_regdate_s=&search_regdate_e=&order=&desc=asc&srch_prc_stts=&item_num=0&search_dept_id=&search_dept_nm=&srch_usr_nm=N&srch_usr_titl=N&srch_usr_ctnt=N&srch_mng_nm=N&old_dept_nm=&search_gbn=&search_section=&source=&search1=&lcmspage=1",
+      "phone": "국토발전전시관 02-3425-8900~1",
+      "description": ""
     },
     {
       "seq": "400093",
@@ -803,8 +816,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://www.molit.go.kr/molitum/USR/BORD0201/m_36961/DTL.jsp?id=um_6_1&amp;cate=&amp;mode=view&amp;idx=1318&amp;key=&amp;search=&amp;search_regdate_s=&amp;search_regdate_e=&amp;order=&amp;desc=asc&amp;srch_prc_stts=&amp;item_num=0&amp;search_dept_id=&amp;search_dept_nm=&amp;srch_usr_nm=N&amp;srch_usr_titl=N&amp;srch_usr_ctnt=N&amp;srch_mng_nm=N&amp;old_dept_nm=&amp;search_gbn=&amp;search_section=&amp;source=&amp;search1=&amp;lcmspage=1",
-      "phone": "국토발전전시관 02-3425-8900~1"
+      "sourceUrl": "https://www.molit.go.kr/molitum/USR/BORD0201/m_36961/DTL.jsp?id=um_6_1&cate=&mode=view&idx=1318&key=&search=&search_regdate_s=&search_regdate_e=&order=&desc=asc&srch_prc_stts=&item_num=0&search_dept_id=&search_dept_nm=&srch_usr_nm=N&srch_usr_titl=N&srch_usr_ctnt=N&srch_mng_nm=N&old_dept_nm=&search_gbn=&search_section=&source=&search1=&lcmspage=1",
+      "phone": "국토발전전시관 02-3425-8900~1",
+      "description": ""
     },
     {
       "seq": "383876",
@@ -817,7 +831,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://home.sookmyung.ac.kr/sites/chungyoungyang/index.do",
-      "phone": "정영양자수박물관 02-2077-7210"
+      "phone": "정영양자수박물관 02-2077-7210",
+      "description": ""
     },
     {
       "seq": "378574",
@@ -830,7 +845,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://www.koreafilm.or.kr/museum/exhibition/EI_00060",
-      "phone": "한국영화박물관 02-3153-2072"
+      "phone": "한국영화박물관 02-3153-2072",
+      "description": "사람이든 사물이든, 어떤 대상을 맞닥뜨릴 때 가장 먼저 마주하는 것이 바로 ‘이름’이다. 이름은 그 대상을 인식하는 가장 짧고도 강력한 언어다. 그렇기에 우리는 이름을 짓는 데 적지 않은 시간과 에너지를 들인다.수십 억의 예산과 수많은 인력이 투입되는 영화에서 제목은 어떠한 의미를 지닐까. 영화 제목은 영화가 품고 있는 세계의 다성적 측면들을 한 줄, 혹은 한 단어로 응축한 결과물이다. 제목은 스크린이 열리기도 전에, 관객으로 하여금 영화의 본질을 상상하면서 자신만의 예고편을 머릿속에서 상영하게 한다. 또한 제목은 그 자체로 특정 시대를 반영하는 징후이자, 대중의 감각을 드러내는 기호다. 한자가 섞인 고풍스러운 문어체가 스크린을 지배했던 시대가 있는가 하면, 정체불명의 외래어가 ‘세련’의 징표처럼 불려 나온 시대가 있었고, 생활의 요청을 반영하는 나른한 구어체 제목이 풍미하기도 했다. 곧 제목 짓기의 변천사는 한국 사회의 문화 트렌드, 변덕스러운 대중의 감성을 반영해 왔다. 은 1919년부터 2025년까지 공개된 한국영화 8,400여 편의 제목을 다양한 키워드로 재배열하고 분석해 한국영화를 바라보는 새로운 레퍼런스를 제시한다. 가장 빈번하게 등장하는 단어를 통해 시대별 정서와 서사의 흐름을 읽어내고, 한국영화사를 대표하는 배우의 필모그래피를 제목의 관점에서 조명한다. 또한 젠더, 색채, 문장 구조 등 여러 층위의 필터를 가져와 한국영화사를 새로운 관점으로 바라보고자 한다. 제목이 지닌 조형적 미학에도 주목한다. 오프닝 시퀀스 속 제목의 움직임, 포스터와 전단에서 마주하는 다양한 제목 서체와 디자인은 영화의 정서를 시각적으로 구현하는 장치인 동시에 그 자체로 한글의 아름다움을 증명한다. 전시실 벽면을 가득 채운 자유롭게 생동하는 레터링과 캘리그래피, 동시대 감독과 그래픽 디자이너가 각자의 시선으로 재해석한 애니메이션과 영상 작업은, 익숙한 영화 제목에 새로운 호흡을 불어넣는다. 은 정지된 텍스트로 존재하던 영화 제목을 다시 움직이게 하고, 새로이 읽히도록 하는 것을 넘어 ‘경험’의 대상으로 확장한다. 이름은 더 이상 부르는 것에 머무르지 않는다. 이곳에서 제목은, 다시 살아 움직인다."
     },
     {
       "seq": "400092",
@@ -842,8 +858,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://www.molit.go.kr/molitum/USR/BORD0201/m_36961/DTL.jsp?id=um_6_1&amp;cate=&amp;mode=view&amp;idx=1322",
-      "phone": "국토발전전시관 02-3425-8900~1"
+      "sourceUrl": "https://www.molit.go.kr/molitum/USR/BORD0201/m_36961/DTL.jsp?id=um_6_1&cate=&mode=view&idx=1322",
+      "phone": "국토발전전시관 02-3425-8900~1",
+      "description": ""
     },
     {
       "seq": "380357",
@@ -856,7 +873,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://sema.seoul.go.kr/kr/whatson/exhibition/detail?exNo=1529410",
-      "phone": "서울시립미술관 02-2124-8868"
+      "phone": "서울시립미술관 02-2124-8868",
+      "description": ""
     },
     {
       "seq": "394839",
@@ -869,7 +887,8 @@
       "isFree": false,
       "isPermanent": false,
       "sourceUrl": "https://www.jfac.or.kr/site/main/program/perf_exhi_list_view?pgIdx=2735",
-      "phone": "02-6951-2106"
+      "phone": "02-6951-2106",
+      "description": ""
     },
     {
       "seq": "380136",
@@ -882,7 +901,8 @@
       "isFree": false,
       "isPermanent": false,
       "sourceUrl": "https://tickets.interpark.com/goods/26005804",
-      "phone": "전시티켓 02-2004-8800 / 단체문의 02-2230-6739"
+      "phone": "전시티켓 02-2004-8800 / 단체문의 02-2230-6739",
+      "description": ""
     },
     {
       "seq": "384576",
@@ -894,8 +914,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://museum.seoul.go.kr/cgcm/board/NR_boardView.do?bbsCd=1002&amp;seq=20260529170246055",
-      "phone": "청계천박물관 02-2286-3410"
+      "sourceUrl": "https://museum.seoul.go.kr/cgcm/board/NR_boardView.do?bbsCd=1002&seq=20260529170246055",
+      "phone": "청계천박물관 02-2286-3410",
+      "description": ""
     },
     {
       "seq": "364984",
@@ -907,8 +928,9 @@
       "price": "미정",
       "isFree": false,
       "isPermanent": false,
-      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&amp;exhId=202601060002027",
-      "phone": "국립현대미술관 02‒3701‒9500"
+      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&exhId=202601060002027",
+      "phone": "국립현대미술관 02‒3701‒9500",
+      "description": "«이것은 개념미술이 (아니)다»는 한국현대미술의 흐름 속에서 물질적 형식이나 시각적 완성보다는 개념과 언어, 과정과 맥락에 주목해온 개념적 경향의 미술을 조명하는 전시이다. 특히 이번 전시는 미술에서의 언어적 전회에 주목하며, 사물과 언어, 언어와 행위, 측정과 지도, 현실과 제도비판 등의 소주제를 통해 미술의 본질과 현실을 끊임없이 성찰해온 작업들을 다시 살펴본다. 더불어 고도의 자본주의와 급격한 사회ㆍ정치적 변화 속에서 전개된 1990년대 전후 미술의 개념적 경향을 이전 세대 미술의 흐름과 함께 살펴봄으로써 한국현대미술의 동시대성을 논의해보는 계기를 마련하고자 한다."
     },
     {
       "seq": "387427",
@@ -920,8 +942,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://www.nlcy.go.kr/NLCY/contents/C41100000000.do?schM=view&amp;idx=1132477",
-      "phone": "국립어린이청소년도서관 02-3413-4800"
+      "sourceUrl": "https://www.nlcy.go.kr/NLCY/contents/C41100000000.do?schM=view&idx=1132477",
+      "phone": "국립어린이청소년도서관 02-3413-4800",
+      "description": "ㅇ주최 : 국립어린이청소년도서관ㅇ장소 : 전시실(2층)ㅇ내용 - 지난 20년간 도서관의 역사와 주요 성과 및 인기대출도서 소개 - 사서추천도서, 독서도움자료 등 도서관이 개발한 주요 독서 콘텐츠 체험 - AI를 활용한 동화 만들기, 미래 모습 만나기 등 미래 상상 콘텐츠 운영"
     },
     {
       "seq": "384792",
@@ -933,8 +956,9 @@
       "price": "성인 5,000원 / 어린이 및 청소년 3,000원",
       "isFree": false,
       "isPermanent": false,
-      "sourceUrl": "https://www.museum.go.kr/MUSEUM/contents/M0202020000.do?menuId=upcomming&amp;schM=view&amp;act=upcomming&amp;exhiSpThemId=3529713&amp;listType=list",
-      "phone": "국립중앙박물관 특별전시 1644-7169"
+      "sourceUrl": "https://www.museum.go.kr/MUSEUM/contents/M0202020000.do?menuId=upcomming&schM=view&act=upcomming&exhiSpThemId=3529713&listType=list",
+      "phone": "국립중앙박물관 특별전시 1644-7169",
+      "description": ""
     },
     {
       "seq": "383911",
@@ -946,8 +970,9 @@
       "price": "15,000원 (얼리버드 9,900원)",
       "isFree": false,
       "isPermanent": false,
-      "sourceUrl": "https://www.sejongpac.or.kr/dfac/dfacPerformance/dfacPerformance/performTicket.do?performIdx=37358&amp;menuNo=1200015#none",
-      "phone": "콜센터 02-399-1000 / 단체예약 1800-8714"
+      "sourceUrl": "https://www.sejongpac.or.kr/dfac/dfacPerformance/dfacPerformance/performTicket.do?performIdx=37358&menuNo=1200015#none",
+      "phone": "콜센터 02-399-1000 / 단체예약 1800-8714",
+      "description": ""
     },
     {
       "seq": "395494",
@@ -959,8 +984,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://nl.go.kr/NL/contents/N40800000000.do?schM=view&amp;schId=EV-20260710083434442100",
-      "phone": "국립중앙도서관 02-590-0500"
+      "sourceUrl": "https://nl.go.kr/NL/contents/N40800000000.do?schM=view&schId=EV-20260710083434442100",
+      "phone": "국립중앙도서관 02-590-0500",
+      "description": ""
     },
     {
       "seq": "395476",
@@ -973,7 +999,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://sema.seoul.go.kr/kr/whatson/exhibition/detail?exNo=1553791",
-      "phone": "서울시립 사진미술관 02-2124-7600"
+      "phone": "서울시립 사진미술관 02-2124-7600",
+      "description": ""
     },
     {
       "seq": "364451",
@@ -985,8 +1012,9 @@
       "price": "2,000원",
       "isFree": false,
       "isPermanent": false,
-      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&amp;exhId=202512310002018",
-      "phone": "[홈페이지 참고]"
+      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&exhId=202512310002018",
+      "phone": "[홈페이지 참고]",
+      "description": "«올해의 작가상»은 2012년부터 국립현대미술관과 SBS문화재단이 공동으로 주최해 온 대표적인 현대미술 작가 후원 프로그램이자 수상 제도이다. 매년 작가 4인을 선정하여 신작 제작과 전시를 지원하고, 이후에도 각 작가의 국제적 활동을 폭넓게 뒷받침함으로써 한국 현대미술의 발전을 도모해 오고 있다. 2023년부터 제도 개선을 통해 작가들의 제작 지원을 한층 강화하고, 신작 커미션뿐만 아니라 주요 이전 작업을 함께 선보이는 전시 구성으로 각 작가의 예술 세계를 보다 입체적으로 조명하고 있다. «올해의 작가상 2026»은 작가의 주제의식과 예술 세계에 대한 스토리텔링을 심화함으로써 한국 미술계의 주요 작가들을 거시적인 관점에서 조망하고, 이를 국제적 미술 담론과 연결하는 기반을 마련하고자 한다."
     },
     {
       "seq": "393394",
@@ -999,7 +1027,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://sema.seoul.go.kr/kr/whatson/exhibition/detail?exNo=1556711",
-      "phone": "서울시립 남서울미술관 02-598-6246~7"
+      "phone": "서울시립 남서울미술관 02-598-6246~7",
+      "description": ""
     },
     {
       "seq": "364982",
@@ -1011,8 +1040,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&amp;exhId=202601060002028",
-      "phone": "국립현대미술관 02‒3701‒9500"
+      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&exhId=202601060002028",
+      "phone": "국립현대미술관 02‒3701‒9500",
+      "description": "국립현대미술관과 LG전자의 중장기 협력 프로그램인 «MMCA x LG OLED 시리즈»는 역량 있는 동시대 작가에게 작품 제작비 및 기술 인프라를 지원함으로써 동시대 현대미술의 새로운 매체 실험 및 담론을 형성하고, 기술과 예술을 바탕으로 한 대형 신작 제작을 통해 현대미술의 대중화에 기여하고자 한다. 서울관의 상징적 전시공간 서울박스(Seoul Box)의 공간적 특성을 반영한 설치작품을 전시하여 현대미술의 독창적 예술 경험을 관객에게 제공한다. 시리즈의 두 번째 작가는 2026년 초 발표된다."
     },
     {
       "seq": "393221",
@@ -1024,8 +1054,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://archivist.kr/exi?m=gov&amp;i=1786525248",
-      "phone": "the_gallery_hosu@naver.com"
+      "sourceUrl": "https://archivist.kr/exi?m=gov&i=1786525248",
+      "phone": "the_gallery_hosu@naver.com",
+      "description": ""
     },
     {
       "seq": "391812",
@@ -1037,8 +1068,9 @@
       "price": "2,000원 / ※덕수궁 입장료 1,000원 별도",
       "isFree": false,
       "isPermanent": false,
-      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=1&amp;exhId=202601120002029",
-      "phone": "국립현대미술관 덕수궁관 02-2022-0600"
+      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=1&exhId=202601120002029",
+      "phone": "국립현대미술관 덕수궁관 02-2022-0600",
+      "description": ""
     },
     {
       "seq": "393439",
@@ -1051,7 +1083,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://sema.seoul.go.kr/kr/whatson/exhibition/detail?exNo=1563285",
-      "phone": "서울시립 북서울미술관 02-2124-5248~9"
+      "phone": "서울시립 북서울미술관 02-2124-5248~9",
+      "description": ""
     },
     {
       "seq": "394138",
@@ -1063,8 +1096,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://museum.seoul.go.kr/www/board/NR_boardView.do?bbsCd=1002&amp;q_exhSttus=next&amp;seq=20260723145427523&amp;sso=ok",
-      "phone": "02-724-0274"
+      "sourceUrl": "https://museum.seoul.go.kr/www/board/NR_boardView.do?bbsCd=1002&q_exhSttus=next&seq=20260723145427523&sso=ok",
+      "phone": "02-724-0274",
+      "description": ""
     },
     {
       "seq": "395525",
@@ -1076,8 +1110,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&amp;exhId=202608200002088",
-      "phone": "국립현대미술관 02-3701-9500"
+      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&exhId=202608200002088",
+      "phone": "국립현대미술관 02-3701-9500",
+      "description": "바람 소리, 나뭇잎 소리, 발자국 소리.... 김준 작가와 서울특별시어린이병원 아이들, 그리고 가족은 미술관과 주변을 탐색하며 함께 소리를 듣고, 기록하고, 작품으로 만들었습니다. «사각사각 소곤소곤»은 7주간 함께 만들어낸 감각의 여정을 담은 전시입니다. 잠시 귀를 기울여 보세요. 세상은 생각보다 더 많은 이야기를 들려줍니다."
     },
     {
       "seq": "394530",
@@ -1090,7 +1125,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://sema.seoul.go.kr/kr/whatson/exhibition/detail?exNo=1565012",
-      "phone": "서울시립 서서울미술관 02-2124-5815"
+      "phone": "서울시립 서서울미술관 02-2124-5815",
+      "description": ""
     },
     {
       "seq": "394462",
@@ -1103,7 +1139,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "http://www.sejul.com",
-      "phone": "02-391-9171"
+      "phone": "02-391-9171",
+      "description": "2026 년 8월 20일(목)부터 10월 10일(토) 갤러리 세줄 차계남의 작업은 언제나 재료에서 출발했지만, 그 끝은 재료에 머물지 않았다. 섬유, 사이잘 마, 한지, 먹. 작가가 선택한 재료들은 부드럽고 유연하며, 때로는 쉽게 찢기고 흩어질 수 있는 것들이었다. 그러나 차계남은 이 연약한 재료들을 반복적으로 물들이고, 꼬고, 쌓아 올리며 하나의 단단한 세계로 이끌었다. 그의 작업에서 재료는 형태가 되고, 형태는 시간이 되며, 시간은 다시 침묵의 공간으로 남는다. 초기 섬유 조형 작업에서 차계남은 사이잘 마를 염색하고 압축하며 섬유의 가능성을 조각적 차원으로 확장했다. 실과 섬유는 더 이상 평면 위에 머무는 장식적 요소가 아니었다. 그것은 스스로 서고, 공간을 점유하며, 관람자의 신체와 마주하는 구조가 되었다. 부드러운 재료가 단단한 존재감을 획득하는 이 과정은 차계남의 작업 세계를 이해하는 중요한 출발점이다. 그의 작품에서 침묵은 단순한 고요가 아니라 시간의 축적과 사유가 머무는 공간이며, 검정은 종결의 색이 아니라 생성과 가능성을 품은 깊이로 읽힌다. 반복된 행위가 만들어낸 구조와 화면은 형태를 넘어 삶과 죽음, 존재와 부재, 유(有)와 무(無)가 공존하는 하나의 공간으로 만들어내고 있다. 2000년대 이후 한지와 먹으로 이어진 작업에서도 이러한 태도는 계속된다. 작가는 한지 위에 먹으로 마음에 품어온 글귀들을 적고, 그 글이 담긴 종이를 잘라 실처럼 꼬았다. 글자는 형태를 잃지만 완전히 사라지지는 않는다. 점과 선의 흔적으로 남아 화면 위에서 또 다른 풍경이 된다. 이렇게 만든 실을 화면에 한 가닥씩 붙여 나가는 행위는 단순한 제작 방식이 아니라, 반복을 통해 시간을 축적하는 수행의 과정이었다. 작가는 이를 두고 그리려는 욕구를 스스로 통제하고 무심(無心)의 상태에서 행위 자체에 집중하는 일이라 말했다. 검정과 흰색이 만들어내는 화면은 산수의 풍경처럼 보이기도 하고, 어떤 기억의 지층처럼 다가오기도 한다. 그 안에서 우리는 보이는 것과 보이지 않는 것, 사라지는 것과 남는 것 사이의 조용한 긴장을 마주한다. 이번 전시는 작가의 삶을 회고하는 전시에 머물지 않는다. 오히려 그의 작품이 오늘의 시간 속에서 어떻게 새로운 의미를 획득하는지를 살펴보는 자리이며, 작품을 바라보는 자들은 작품을 감상하는 것을 넘어 그 안에 축적된 작가의 시간과 공간을 경험하게 된다. “언젠가, 어쩌면”이라는 말에는 아직 끝나지 않은 도착의 감각이 있다. 어느 날, 어쩌면, 우리는 차계남의 작업 앞에서 다시 묻게 된다. 무엇이 사라지고, 무엇이 남는가? 침묵은 어떻게 형태가 되는가? 검정 안에서 무엇이 다시 태어나는가? “보이지 않는 것은 어떻게 존재하는가” 이 시점에서 차계남작가의 예술적 작품의 의미를 다시한번 새롭게 조명하고자 합니다."
     },
     {
       "seq": "397108",
@@ -1116,7 +1153,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://news.seoul.go.kr/culture/archives/532484?listPage=1",
-      "phone": "운영사무국 02-6952-4907"
+      "phone": "운영사무국 02-6952-4907",
+      "description": ""
     },
     {
       "seq": "396420",
@@ -1129,7 +1167,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://news.seoul.go.kr/culture/archives/534029",
-      "phone": "02-2133-1937"
+      "phone": "02-2133-1937",
+      "description": ""
     },
     {
       "seq": "396419",
@@ -1142,7 +1181,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://www.instagram.com/p/DcvMsKWAYnQ/?img_index=1",
-      "phone": "02-2133-1935"
+      "phone": "02-2133-1935",
+      "description": ""
     },
     {
       "seq": "395947",
@@ -1154,8 +1194,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://archivist.kr/exi?m=gov&amp;i=1788095782",
-      "phone": "+82 (0)2-6448-5087, info@gallery-508.com"
+      "sourceUrl": "https://archivist.kr/exi?m=gov&i=1788095782",
+      "phone": "+82 (0)2-6448-5087, info@gallery-508.com",
+      "description": ""
     },
     {
       "seq": "396488",
@@ -1168,7 +1209,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://www.instagram.com/p/DcvLyJkAYi8/",
-      "phone": "02-2133-1938"
+      "phone": "02-2133-1938",
+      "description": ""
     },
     {
       "seq": "399678",
@@ -1181,7 +1223,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://craftmuseum.seoul.go.kr/exhibit/plan/view/192",
-      "phone": "서울공예박물관 02-6450-7000"
+      "phone": "서울공예박물관 02-6450-7000",
+      "description": ""
     },
     {
       "seq": "395491",
@@ -1194,7 +1237,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://sema.seoul.go.kr/kr/whatson/exhibition/detail?exNo=1576627",
-      "phone": "서울시립 서서울미술관 02-2124-5800~1"
+      "phone": "서울시립 서서울미술관 02-2124-5800~1",
+      "description": ""
     },
     {
       "seq": "399679",
@@ -1207,7 +1251,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://craftmuseum.seoul.go.kr/exhibit/plan/view/193",
-      "phone": "서울공예박물관 02-6450-7000"
+      "phone": "서울공예박물관 02-6450-7000",
+      "description": ""
     },
     {
       "seq": "399228",
@@ -1220,7 +1265,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://www.gangnam.go.kr/office/gfac/board/gfac_artcube_02/489/view.do?mid=gfac_artcube_02",
-      "phone": "02-547-9177"
+      "phone": "02-547-9177",
+      "description": ""
     },
     {
       "seq": "398150",
@@ -1232,8 +1278,9 @@
       "price": "성인 5,000원 / 어린이 및 청소년 4,000원",
       "isFree": false,
       "isPermanent": false,
-      "sourceUrl": "http://www.savinamuseum.com/kor/exview.action?exdgb=OF&amp;exfgb=&amp;startdt=&amp;cpage=1&amp;exidx=276&amp;searchFlag=&amp;searchValue=",
-      "phone": "02-736-4371"
+      "sourceUrl": "http://www.savinamuseum.com/kor/exview.action?exdgb=OF&exfgb=&startdt=&cpage=1&exidx=276&searchFlag=&searchValue=",
+      "phone": "02-736-4371",
+      "description": ""
     },
     {
       "seq": "397503",
@@ -1246,7 +1293,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "http://www.snumoa.org/exhibitions_view.php?exh_id=195",
-      "phone": "서울대학교미술관 02-880-9504"
+      "phone": "서울대학교미술관 02-880-9504",
+      "description": ""
     },
     {
       "seq": "400439",
@@ -1259,7 +1307,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://www.gangnam.go.kr/office/gfac/board/gfac_artcube_02/491/view.do?mid=gfac_artcube_02",
-      "phone": "070-4184-4986"
+      "phone": "070-4184-4986",
+      "description": ""
     },
     {
       "seq": "398043",
@@ -1272,7 +1321,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://seoripulgallery.com/exhibition",
-      "phone": "02-3477-2074"
+      "phone": "02-3477-2074",
+      "description": ""
     },
     {
       "seq": "399949",
@@ -1285,7 +1335,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "http://www.fillgallery.com",
-      "phone": "02-795-0046"
+      "phone": "02-795-0046",
+      "description": "필 갤러리는 오는 9월 12일부터 10월 24일까지 김정한 작가의 개인전 《InnerSpace#26》을 개최한다. 빠른 이미지 소비와 AI의 등장으로 생성과 소멸의 가속화가 이어지는 동시대 속에서, 이번 전시는 전통적 미디어로서 회화가 지닌 의미와 가능성을 다시금 확장하고자 기획되었다. 김정한 작가는 언어적 기호인 ‘문자’를 회화의 한 단위로 삼아, 문자의 구조와 여백, 그리고 이를 거듭 겹치고 덮는 행위를 통해 회화적 공간을 구축한다. 캔버스 위에서 의미를 상실하고 선과 면, 리듬과 밀도로 변모한 문자는 수직의 붓질과 아크릴 과슈의 오목볼록한 마티에르를 만나 깊은 시간의 층(layer)을 이룬다. 작가는 오랫동안 ‘채움’과 ‘비움’의 관계를 탐구해 왔다. 캔버스 바탕 위에 문장을 겹쳐 쓰고 네 방향으로 돌려가며 수직 붓질을 반복하는 작업은, 요철의 도드라진 부분에만 색이 얹히고 파인 자리는 비워두는 절제된 행위의 연속이다. 이는 단순한 상징을 의도하기보다 붓질의 반복을 통해 시간의 흔적을 담아내는 일이다. 최근 작업에서는 해체와 재조합을 거쳐 얼굴이나 캐릭터, 기존 회화의 이미지를 다시 끌어들임으로써 문자와 여백, 표면 사이의 새로운 회화적 가능성을 모색하고 있다. 미술평론가 칸바라 마사아키(Masaaki Kambara)는 *\"김정한의 작품은 회화라는 전통 미디어가 아직 건재함을 일깨워 준다. 한순간에 사라지지 않는 존재의 중후함을 밑받침하는 그의 그림은 레이어케이크처럼 층층이 쌓여 있다\"*고 평가하며, 축적된 레이어가 지닌 존재감을 강조했다. 또한 미술평론가 서명리는 *\"서양화에서 여백이 '안 그린 곳'이라면, 김작가에게 여백은 시작이자 멈춤, 반전이 되는 작품의 중요한 구성 요소\"*라며 작가가 다루는 여백의 독창적 의미를 짚었다. 작가는 자신의 작업을 \"하나의 답을 제시하는 것이 아니라, 그리고, 덮고, 남기고, 비워두는 되풀이를 통해 아직 말이 되지 않은 감각을 바라보는 일\"이라고 말하며 그 공간에 ‘InnerSpace’라는 이름을 부여한다. 필 갤러리에서 펼쳐지는 이번 전시를 통해 관람객들이 속도의 시대에서 벗어나 회화가 주는 중후한 물질성과 비워진 여백 속 깊은 감각을 체감하길 기대한다. 전시 제목: 김정한 개인전 《 InnerSpace#26 》 전시 기간: 2026년 9월 12일(토) – 10월 24일(토) 운영 시간: 화요일 – 토요일 11:00 – 18:00 (일, 월, 공휴일 휴관 / 9월 26일, 10월 3일 정상운영) 전시 장소: 필 갤러리 제 1 전시실, 제 2 전시실 (서울 용산구 유엔빌리지길 24)"
     },
     {
       "seq": "398918",
@@ -1297,8 +1348,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://www.seoul284.org/program/view/category/319/state/5/menu/328?thisPage=1&amp;idx=377&amp;searchField=all&amp;searchText=",
-      "phone": "문화역서울284 02-3407-3506"
+      "sourceUrl": "https://www.seoul284.org/program/view/category/319/state/5/menu/328?thisPage=1&idx=377&searchField=all&searchText=",
+      "phone": "문화역서울284 02-3407-3506",
+      "description": ""
     },
     {
       "seq": "400464",
@@ -1311,7 +1363,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://kwmuseum.org/",
-      "phone": "경운박물관 02-3463-1336"
+      "phone": "경운박물관 02-3463-1336",
+      "description": ""
     },
     {
       "seq": "398537",
@@ -1324,7 +1377,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "http://www.gallerybaton.com",
-      "phone": "02-597-5701"
+      "phone": "02-597-5701",
+      "description": "갤러리바톤은 확장 이전한 한남동의 새로운 전시 공간에서 재개관전 《GRACE》를 2026년 9월 18일부터 10월 10일까지 개최한다. 이번 전시는 갤러리 작가들을 중심으로 구성되며, 다양한 주제와 예술적 실천을 아우르는 작품을 통해 바톤이 지향해온 폭넓은 예술적 스펙트럼을 한자리에서 조명한다. 두 개의 전시층(G1B, G2B)에서 열리는 전시는 작가들의 대표작과 근작을 통해 서로 다른 예술적 실천이 교차하는 지점을 보여준다. 故전국광의 조각 (1987)은 한국 현대조각의 독자적인 조형 언어를 보여준다. 리암 길릭은 구조와 관계에 대한 지속적인 탐구를, 조나단 몽크는 미술의 형식을 재구성하는 개념적 접근을 이어가는 신작을 공개한다. 허달재와 빈우혁은 자연을 회화의 대상으로 삼아 서로 다른 회화적 시선과 기법으로 풍경을 풀어낸다. 한 벽면을 가득채운 리너스 반 데 벨데의 목탄 회화들은 가상과 실제가 교차하는 가운데 독자적인 서사 세계를 펼쳐 보인다. 또한, 이재석과 최민영은 개인의 경험과 상상에서 출발해 고유한 회화적 이미지를 구축한다. 노에미 구달의 영상 〈Below the Deep. South〉(2021)는 열대 숲의 이미지가 불에 의해 소실되는 과정을 보여주며, 지구의 시간과 자연 환경의 변화를 탐구한다. 회화, 조각, 영상 등 폭넓은 매체를 아우르는 이번 전시는 갤러리바톤의 확장 이전을 기점으로, 그동안 소개해온 동시대 미술의 다양한 흐름과 작업을 한자리에서 보여주고자 한다."
     },
     {
       "seq": "398894",
@@ -1336,8 +1390,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://www.karts.ac.kr/nri/bbs/NuriBbsDetail.do?pageIndex=1&amp;bbsId=BBSNURI_001&amp;nttNo=9857004&amp;menuType=",
-      "phone": "[홈페이지 참고]"
+      "sourceUrl": "https://www.karts.ac.kr/nri/bbs/NuriBbsDetail.do?pageIndex=1&bbsId=BBSNURI_001&nttNo=9857004&menuType=",
+      "phone": "[홈페이지 참고]",
+      "description": ""
     },
     {
       "seq": "400035",
@@ -1349,8 +1404,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://archivist.kr/exi?m=gov&amp;i=1790417694",
-      "phone": "+82 (0)507-1395-4728, jejugalleryseoul@naver.com"
+      "sourceUrl": "https://archivist.kr/exi?m=gov&i=1790417694",
+      "phone": "+82 (0)507-1395-4728, jejugalleryseoul@naver.com",
+      "description": ""
     },
     {
       "seq": "400755",
@@ -1363,7 +1419,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://www.gangnam.go.kr/office/gfac/board/gfac_artcube_02/490/view.do?mid=gfac_artcube_02",
-      "phone": "02-790-2138"
+      "phone": "02-790-2138",
+      "description": ""
     },
     {
       "seq": "400329",
@@ -1376,7 +1433,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "http://www.imazoo.com",
-      "phone": "02-557-1950"
+      "phone": "02-557-1950",
+      "description": "고려명 작가는 인간의 시선으로는 쉽게 포착하기 어려운 사물의 미세한 세계를 탐구하는 사진가이다. 그는 피사체를 근접 촬영한 뒤 대형 이미지로 확대하는 방식을 통해, 익숙한 사물을 낯설고도 새로운 감각으로 제시한다. 이러한 작업은 단순한 재현을 넘어, 사물의 표면 너머에 존재하는 질감과 구조, 그리고 물질이 지닌 고유한 성질을 드러낸다. 디지털 환경이 보편화된 시대에도 작가가 고집하는 아날로그 카메라와 천문 관측에 사용되는 특수필름이라는 재료의 사용은 일반적인 사진에서는 경험하기 어려운 독특한 색감과 질감을 구현해낸다. 이러한 방식은 일상적인 사물에 대한 인식을 확장 시키고, 새로운 미적 경험을 제안하는 데 중요한 역할을 하고 있다. 주인공이 되는 사물에 대한 몰입을 방해하지 않는 절제된 여백으로 자연스럽게 관람자의 시선을 중앙에 집중시키는 화면 구성 또한 고려명 작가의 작품 속 특징이다. ‘포도 시리즈’는 고려명 작가의 작업 세계를 잘 보여주는 대표적인 시리즈이다. 작가는 일상에서 우연히 마주한 포도를 하나의 작은 우주로 인식하고, 그 안에 내재된 생명성과 상징성을 탐구한다. 자연 그대로의 형태를 기반으로 하되, 다양한 재료의 활용과 디지털 채색 과정을 더해 개성적이고 감각적인 이미지를 완성한다. 이러한 과정으로 현실의 사물과 작가의 상상이 결합 된 복합적인 작품으로 탄생 된 이미지는 관람자에게 다양한 감정과 해석의 가능성을 열어준다."
     },
     {
       "seq": "398953",
@@ -1389,7 +1447,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://www.instagram.com/cafe_decr/",
-      "phone": "디크레센도 070-4639-2200"
+      "phone": "디크레센도 070-4639-2200",
+      "description": ""
     },
     {
       "seq": "400259",
@@ -1401,8 +1460,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://archivist.kr/exi?m=gov&amp;i=1790476503",
-      "phone": "+82 (0)2-739-6406, jinkim@cacf.or.kr"
+      "sourceUrl": "https://archivist.kr/exi?m=gov&i=1790476503",
+      "phone": "+82 (0)2-739-6406, jinkim@cacf.or.kr",
+      "description": ""
     },
     {
       "seq": "400140",
@@ -1415,7 +1475,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://www.instagram.com/apiece_apeace/",
-      "phone": "0507-1465-9012"
+      "phone": "0507-1465-9012",
+      "description": ""
     },
     {
       "seq": "399657",
@@ -1428,7 +1489,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://blog.naver.com/gallery3366",
-      "phone": "02-2192-3366"
+      "phone": "02-2192-3366",
+      "description": ""
     },
     {
       "seq": "399681",
@@ -1441,7 +1503,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://craftmuseum.seoul.go.kr/exhibit/plan/view/195",
-      "phone": "서울공예박물관 02-6450-7000"
+      "phone": "서울공예박물관 02-6450-7000",
+      "description": ""
     },
     {
       "seq": "401075",
@@ -1454,7 +1517,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "http://www.vidigallery.com",
-      "phone": "02-3789-3872"
+      "phone": "02-3789-3872",
+      "description": "비디갤러리에서는 10월 01일부터 10월 22일까지 김진영, 정석우 작가의 2인전인 를 진행한다. 이번 전시는 비움과 축적, 변화와 흔적의 관계를 통해 회화가 자연의 존재를 풀어내는 과정을 살펴본다. 서로 다른 방식으로 물질과 환경을 탐구해온 두 작가의 작업은 화면을 고정된 이미지가 아닌, 시간과 감각이 머무르고 변화하는 장으로 확장한다. 비어 있는 공간과 쌓여가는 물질, 우연히 남겨진 흔적은 서로 긴장하며 하나의 리듬을 만들고, 그 안에서 자연과 인간의 관계가 새롭게 드러난다. 관람자는 작품을 바라보는 동시에 그 변화의 흐름 속에서 익숙한 이미지 너머에 감춰진 새로운 의미를 발견하게 된다."
     },
     {
       "seq": "400408",
@@ -1466,8 +1530,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://archivist.kr/exi?m=gov&amp;i=1790806191",
-      "phone": "0507-1382-1868, Cadalogs@naver.com"
+      "sourceUrl": "https://archivist.kr/exi?m=gov&i=1790806191",
+      "phone": "0507-1382-1868, Cadalogs@naver.com",
+      "description": ""
     },
     {
       "seq": "400973",
@@ -1479,8 +1544,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://archivist.kr/exi?m=gov&amp;i=1791238237",
-      "phone": "+82 (0)10-4200-2980, in@ingahee.com"
+      "sourceUrl": "https://archivist.kr/exi?m=gov&i=1791238237",
+      "phone": "+82 (0)10-4200-2980, in@ingahee.com",
+      "description": ""
     },
     {
       "seq": "399644",
@@ -1492,8 +1558,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://doam.me/Exhibition_Information/?bmode=view&amp;idx=173878058&amp;back_url=Lw%3D%3D&amp;t=board&amp;page=1",
-      "phone": "02-2287-0462/0512"
+      "sourceUrl": "https://doam.me/Exhibition_Information/?bmode=view&idx=173878058&back_url=Lw%3D%3D&t=board&page=1",
+      "phone": "02-2287-0462/0512",
+      "description": ""
     },
     {
       "seq": "399977",
@@ -1506,7 +1573,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://blog.naver.com/gu5658",
-      "phone": "02-579-6881"
+      "phone": "02-579-6881",
+      "description": ""
     },
     {
       "seq": "400437",
@@ -1519,7 +1587,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "http://www.ganaart.com",
-      "phone": "02-720-1020"
+      "phone": "02-720-1020",
+      "description": "가나아트 한남은 인간, 자연, 기계의 관계를 탐구해 온 작가 구기정(Goo Gijeong, b. 1990)의 개인전 《Clearview Mechanism》을 개최한다. 서울문화재단 예술창작활동지원에 선정되어 마련된 작가의 가나아트 첫 개인전으로, 2025년 그룹전 《The Garden of Forking Paths》 이후 이어온 디지털 기술과 자연에 대한 탐구를 총 12점의 작품을 통해 조명한다. 구기정은 사진, 그래픽, 영상, 설치를 통해 기술을 매개로 익숙한 자연의 풍경을 낯설게 변형하며, 완성된 이미지보다 그것이 형성되는 조건과 과정에 주목해 왔다. 이번 전시는 이미지 이면에 자리한 조건들을 가시화하는 데서 시작한다. 전시실 입구의 〈투명성 시각 장치〉는 투명한 철제 프레임 안에 LED 기판과 사진, 렌더링 이미지를 함께 배치해, 화면에 상이 맺히기까지 필요한 빛과 장치를 그대로 드러낸다. 전시실 중앙의 〈투명성 렌더링 장치〉는 실제 식물과 그 식물을 렌더링한 가상의 이미지를 나란히 배치해, 가상의 이미지가 실제와 어떤 관계를 맺는지 묻는다. 관람자가 작품 주위를 걸을수록 무엇이 실제이고 무엇이 이미지인지 구분하던 경계는 흐려진다. 실제와 이미지의 관계에 대한 질문은 〈중첩 풍경〉에서 반복적인 변형의 방식으로 이어진다. 작가는 자연을 촬영한 이미지를 디지털로 변형하고, 그 일부를 다시 확대해 촬영하기를 거듭해 얻은 형상들을 디아섹(Diasec) 액자에 겹쳐 설치했다. 앞선 이미지가 다음 이미지의 재료가 되는 이 과정이 거듭될수록, 형상은 처음의 자연에서 점점 멀어져 낯선 장면에 이른다. 동시대의 이미지 역시 저장과 복제, 재가공을 거듭하며 원본과 멀어지기를 반복한다는 점에서, 이 작업은 우리가 매일 마주하는 수많은 이미지의 존재 방식을 다시금 환기시킨다. 원본에서 계속 멀어지는 〈중첩 풍경〉의 흐름과 달리, 전시실 가장 안쪽 창가의 〈중첩 풍경: 창〉은 정반대의 관계를 보여준다. 작가는 갤러리 정원을 촬영해 변형한 이미지를 반투명 그래픽 시트로 만들어, 그 정원이 보이는 창에 부착함으로써 변형된 이미지와 원본을 한 시야 안에 나란히 놓는다. 두 작업을 통해 드러나는 것은, 이미지가 실제를 옮겨 담은 결과물이 아니라 실제와 거리를 벌리고 좁히며 스스로 변화해 가는 과정 그 자체라는 사실이다. 이처럼 《Clearview Mechanism》은 하나의 장면이 만들어지는 방식을 따라가며, 우리가 현실이라 받아들이는 모습이 어떻게 이루어지는지를 탐구한다. 'Clearview'는 대상을 또렷하게 바라보는 시선을, 'Mechanism'은 그 시선을 가능하게 해온 조건들을 가리킨다. 결국 선명하게 본다는 것은 그 장면이 어떻게 지금의 모습으로 보이게 되었는지를 함께 보는 일이다. 《Clearview Mechanism》이 끝내 보여주지 않는 것은 다름 아닌 완성된 장면이다. 그 자리에 남는 것은 지금도 계속되는 변화뿐이며, 무엇이 어떻게 보이는지 매 순간 다시 읽어내는 관람자의 시선은 그 변화를 이어가는 마지막 장치로 작동한다."
     },
     {
       "seq": "400328",
@@ -1532,7 +1601,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "http://www.pyogallery.com",
-      "phone": "02-543-7337"
+      "phone": "02-543-7337",
+      "description": "표갤러리는 2026년 10월 2일부터 10월 31일까지 김강용 작가의 개인전 《KIM KANG YONG: REALITY IMAGE》전을 개최한다. 김강용은 오랫동안 리얼리즘의 맥락에서, 혹은 ‘벽돌 작가’로 주로 알려져 왔다. 그러나 그의 회화는 단순히 벽돌이라는 대상을 재현하거나 산업화 시대의 현실을 기록하는 데 머물지 않는다. 이번 전시는 그가 오랫동안 벽돌을 다루어온 시간을 따라가며, 무엇을 쌓았고 무엇을 바라보았는지를 새롭게 질문하고자 한다. 그의 작업은 ‘소외된 것에 대한 관심’에서 출발한다. 1970년대 한국 사회의 급격한 산업화와 도시개발 속에서 김강용은 완성된 도시의 모습보다 그 도시를 이루는 작고 평범한 것들, 그리고 그 과정에서 주변으로 밀려나는 존재에 주목했다. 대량생산되는 동일한 벽돌은 익명의 단위이지만, 수많은 벽돌이 쌓여 건물과 도시를 이룬다. 송미숙 역시 김강용의 벽돌을 단순한 대상의 재현이 아닌 반복과 구성의 문제로 바라본다. [1] 이처럼 반복되는 벽돌은 사회를 이루는 개별적 존재와 그 속에서 지워지는 개인, 노동, 장소와 기억을 환기한다. 그러나 그의 회화는 벽돌을 반복해서 쌓는 데서 멈추지 않는다. 오랜 시간 같은 대상을 그리고 지워가는 과정 속에서 그의 시선은 점차 벽돌이라는 구체적인 사물에서 벗어나, 벽돌 사이의 간격과 빛, 그림자, 면과 공간의 관계로 확장되었다. 벽돌과 여백은 포지티브와 네거티브의 관계를 이루며 서로를 통해 존재와 부재를 드러낸다. 이러한 변화는 오늘날 더욱 분명해진다. 김강용은 이제 더 이상 벽돌을 그리지 않는다. 벽돌의 형상은 하나의 입방체로 환원되고, 그 자리에 간격과 면, 빛과 그림자가 남는다. 실제 모래와 물감으로 만들어진 평면은 그림자를 통해 깊이와 공간의 환영을 만들어내며, 실체와 환영, 평면과 공간 사이를 오간다. 결국 김강용이 오랫동안 쌓아온 것은 벽돌의 이미지에만 있지 않다. 벽돌을 반복해 그리며 그것을 둘러싼 사회와 개인을 바라보았고, 다시 그것을 지워가는 과정에서 회화의 근본적인 조형 관계를 탐구해왔다. 벽돌이 사라진 자리에는 이제 입방체와 그림자, 그리고 그것을 바라보는 시선이 남는다. 무엇을 쌓았는가? 무엇이 남았는가? [1] 송미숙, 「김강용의 벽돌그림」에서 인용"
     },
     {
       "seq": "400748",
@@ -1545,7 +1615,8 @@
       "isFree": false,
       "isPermanent": false,
       "sourceUrl": "https://www.gangnam.go.kr/office/gfac/board/gfac_artcube_02/493/view.do?mid=gfac_artcube_02",
-      "phone": "02-6712-0514"
+      "phone": "02-6712-0514",
+      "description": ""
     },
     {
       "seq": "401338",
@@ -1558,7 +1629,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://www.gangnam.go.kr/office/gfac/board/gfac_artcube_02/495/view.do?mid=gfac_artcube_02",
-      "phone": "0507-1400-6359"
+      "phone": "0507-1400-6359",
+      "description": ""
     },
     {
       "seq": "400773",
@@ -1570,8 +1642,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://archivist.kr/exi?m=gov&amp;i=1789439531",
-      "phone": "+82 (0)10-4737-1571. jju145@naver.com"
+      "sourceUrl": "https://archivist.kr/exi?m=gov&i=1789439531",
+      "phone": "+82 (0)10-4737-1571. jju145@naver.com",
+      "description": ""
     },
     {
       "seq": "400682",
@@ -1584,7 +1657,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://www.spacedaon.com/",
-      "phone": "02-523-5844, spacedaon@gmail.com"
+      "phone": "02-523-5844, spacedaon@gmail.com",
+      "description": ""
     },
     {
       "seq": "400891",
@@ -1596,8 +1670,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://archivist.kr/exi?m=gov&amp;i=1791086082",
-      "phone": "0507-1494-2094, info@komplex.kr"
+      "sourceUrl": "https://archivist.kr/exi?m=gov&i=1791086082",
+      "phone": "0507-1494-2094, info@komplex.kr",
+      "description": ""
     },
     {
       "seq": "401336",
@@ -1609,8 +1684,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://sma.sbculture.or.kr/sma/exhibition/current.do?mode=view&amp;articleNo=54836&amp;article.offset=0&amp;articleLimit=10",
-      "phone": "02-6925-5011(성북구립미술관), 02-3290-1512(고려대학교박물관)"
+      "sourceUrl": "https://sma.sbculture.or.kr/sma/exhibition/current.do?mode=view&articleNo=54836&article.offset=0&articleLimit=10",
+      "phone": "02-6925-5011(성북구립미술관), 02-3290-1512(고려대학교박물관)",
+      "description": ""
     },
     {
       "seq": "397433",
@@ -1622,8 +1698,9 @@
       "price": "무료",
       "isFree": true,
       "isPermanent": false,
-      "sourceUrl": "https://www.heartanc.org/bbs/view.do?menuId=MENU000015&amp;bbsId=BBS000014&amp;nttNo=24&amp;viewType=page",
-      "phone": "하트하트아트앤컬처 070-8145-7944"
+      "sourceUrl": "https://www.heartanc.org/bbs/view.do?menuId=MENU000015&bbsId=BBS000014&nttNo=24&viewType=page",
+      "phone": "하트하트아트앤컬처 070-8145-7944",
+      "description": ""
     },
     {
       "seq": "401334",
@@ -1636,7 +1713,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "http://www.galerie-gaia.net",
-      "phone": "02-733-3373"
+      "phone": "02-733-3373",
+      "description": "2026년 10월 7일(수)~10월 31일(토) I 관 : 갤러리가이아 서울 T. 02-733-3373 (서울시 강남구 청담동 80-5 1F) 관람시간 : 화~토 10am~6pm (일요일, 월요일, 공휴일 예약관람) [작가 설명] 니나전 Nina Jun Nina Jun (니나 전) 선생님은 한국에서 태어나 20대 초반 미국으로 이주해 현재 캘리포니아를 기반으로 활동하는 조각·설치미술가입니다. California State University, Long Beach에서 조각을 전공해 BFA와 MFA를 취득했으며, 대학원 졸업 당시 Distinguished Achievement in Creative Activity Award를 수상했습니다. 조각, 브론즈 캐스팅, 세라믹, 비디오 및 설치미술 등 다양한 매체를 연구했으며, 특히 무거운 세라믹을 이용해 가볍게 떠 있는 헬륨 풍선의 모습을 구현한 ‘Ceramic Balloon’ 연작으로 독창적인 작품세계를 구축했습니다. Skidmore Contemporary Art를 비롯한 미국 갤러리에서 개인전과 그룹전을 개최했으며, 뉴욕, 마이애미, LA, 홍콩, 싱가포르, 서울 등 세계 각지의 국제 아트페어에 참여하며 활발하게 활동하고 있습니다. 니나 전은 즐거움과 행복의 심볼인 마일라 풍선을 세라믹 조각으로 재탄생합니다. 그로써 일시적인 소재를 영원히 간직할 수 있는 아트로 만듭니다. 그녀는 어느 날 헬륨가스가 든 풍선이 방 한 가운데 정지한 채 고요히 공간에 떠 있는 것을 보고 중력과 부력의 평형관계에서 오는 평온함을 발견하고는 마치 나비가 꽃 위에서 날개 짓을 할 때의 평형(equilibrium)의 아름다움을 떠올리게 됩니다. 작가는 그 속에서 삶의 모든 것들 속의 아름다운 평형(Eqillibrium)을 느꼈습니다. 그녀의 작품은 아름다운 삶의 균형을 꿈꾸는 작가의 메타포입니다. ​ Nina Jun is a Korean-born sculptor and installation artist who moved to the United States in her early twenties and is now based in California. She earned her BFA and MFA in Sculpture from California State University, Long Beach, receiving the Distinguished Achievement in Creative Activity Award upon completing her graduate studies. Her practice spans sculpture, bronze casting, ceramics, video, and installation. She is particularly known for her *Ceramic Balloon* series, which captures the lightness and buoyancy of helium balloons through the weight and solidity of ceramics, establishing a distinctive artistic language. Jun has presented solo and group exhibitions at American galleries, including Skidmore Contemporary Art, and has participated in international art fairs in New York, Miami, Los Angeles, Hong Kong, Singapore, and Seoul. Nina Jun transforms Mylar balloons—symbols of joy and happiness—into ceramic sculptures, turning an ephemeral material into art that can be cherished forever. One day, she noticed a helium-filled balloon floating silently and motionlessly in the middle of a room. She discovered a sense of serenity in the equilibrium between gravity and buoyancy, recalling the beauty of a butterfly hovering above a flower, its wings gently beating. ​"
     },
     {
       "seq": "400032",
@@ -1649,7 +1727,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://www.instagram.com/p.s.cente",
-      "phone": "02-6956-3051"
+      "phone": "02-6956-3051",
+      "description": ""
     },
     {
       "seq": "401076",
@@ -1662,7 +1741,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "http://www.galleryjj.org",
-      "phone": "02-322-3979"
+      "phone": "02-322-3979",
+      "description": "갤러리JJ는 도시의 질서에서 비껴난 장소와 존재를 사진으로 포착해온 두 작가의 2인전 《Terrain Vague》를 개최한다. 전시에는 독일 태생으로 런던을 기반으로 활동해온 루트 블리스 룩셈부르크(Rut Blees Luxemburg), 그리고 한국과 영국을 오가며 작업해온 김신욱이 참여한다. 전시 제목 ‘떼헹 바그(Terrain Vague)'는 프랑스어로, 도시 안에서 기능과 용도가 불분명한 채 남겨진 공간, 사라지는 것과 새롭게 출현하는 것 사이에 놓인 경계적 장소를 가리키는 건축 용어이다. 두 작가는 이러한 장소와 그 안에 머무는 존재들, 쉽게 지나치거나 망각되는 것들을 사진의 시선 안으로 불러온다. 특히 이들이 주목하는 밤은 익숙한 도시의 경계와 질서가 느슨해지면서 낮에는 가려져 있던 흔적과 기억이 모습을 드러내는 시간이다. 이때 도시는 고정된 풍경을 넘어 서로 다른 시간과 기억, 현실과 상상이 교차하는 불확정적인 지형으로 다시 나타난다. 이번 전시는 밤의 도시를 독특한 시선으로 포착해온 룩셈부르크의 첫 한국 전시로, 작가의 주요 구작과 최근작을 함께 소개한다. 공항 주변과 이주민의 삶을 기록해온 김신욱의 작업과 더불어 전시는 익숙한 도시의 표면 너머에 남겨진 장소와 기억, 그리고 아직 이름 붙여지지 않은 존재들을 새롭게 바라보는 자리가 될 것으로 기대한다. 룩셈부르크는 아날로그 카메라를 사용해 사진을 촬영한다. 이 방식은 작가에게 도시와 보다 오랜 시간 지속적으로 관계를 맺을 것을 요구한다. 그 시간 속에서 작가가 선택한 terrain vague, 즉 사라지는 것과 새롭게 출현하는 것 사이의 경계적 공간으로부터 장소의 정신(Genius Loci)이 서서히 모습을 드러낸다. 그의 사진 속 도시는 끊임없이 스스로를 무대 위에 올리며, 보이지 않는 욕망에 이끌려 유혹적인 퍼포먼스와 지속적인 변형의 장면을 만들어낸다. 전시에 소개되는 초기 대표작 〈Narrow Stage〉와 〈Nach Innen, In Deeper〉는 2000년대 초 런던에서 촬영된 〈Liebeslied〉 연작의 작품으로, 작가가 삶의 터전으로 선택한 런던과 맺어온 낭만적인 관계를 보여준다. 이 작품들에서 밤의 도시는 갈망과 소속감의 장소로 상상되며, 도시의 물질적이고 시적인 조건 속으로 천천히 침잠해 들어가는 과정을 담는다. 최근 연작 〈Hungry City〉는 도시가 지닌 유혹의 힘을 한층 강조하며, 진열과 반사라는 시각적 장치와 유희적인 대화를 이어간다. 쇼윈도가 행인을 유혹하듯 이미지 역시 관람자를 유혹한다. 〈Liquid London〉은 전후 브루탈리즘 건축을 대표하는 바비칸(Barbican) 개발 지구에서부터, 도시의 공공 공간 한가운데서 실제 도축 시설로 기능해온 유서 깊은 스미스필드(Smithfield) 육류 시장에 이르기까지 런던의 상징적인 장소들을 다시 찾는다. 액체적인 것, 희생적인 것, 그리고 도시의 이면을 이루는 원초적 물질성은 도시의 빛나는 본질을 좇는 작가의 탐색 속에서 포착된다. 김신욱의 〈Night Spotting〉은 작가가 7년 가까이 히드로, 인천, 김포 등 여러 국제공항의 외곽을 드나들며 찍은 사진들로 이루어진다. 한낮의 공항들은 저마다의 차이를 드러냈지만, 어둠이 내리면 그 차이는 흐려지고 서로를 닮아갔다. 작가는 촬영지를 밝히지 않은 채 사진들을 한 공간에 나란히 놓고, 관객은 비슷해 보이는 풍경 안에서 익숙함과 낯섦을 동시에 마주하게 된다. 전시의 또 다른 출품작인 〈경계인〉 시리즈는 런던 남서부의 한인 타운 뉴몰든에 정착한 탈북민 최씨와의 만남에서 시작되었다. 작가는 대화와 인터뷰, 편지, 그의 일터와 거처를 담은 사진을 엮어 한 사람의 시간을 기록하지만, 작업의 중심은 탈북이라는 사건보다 새로운 사회에서도 온전히 받아들여지지 못한 채 살아가는 고립의 감각에 있다. 작가에게 경계란 국경선처럼 한곳에 그어진 것이 아니라 중심과 변두리, 떠나온 곳과 도착한 곳 사이를 오가며 계속 겪어내는 상태이며, 사진은 인물을 설명하기보다 그가 서 있는 자리와 주변과의 거리를 가늠하게 한다. 이렇게 최씨의 이야기는 어디에도 완전히 뿌리내리지 못한 이들의 이야기로 확장되며, 쉽게 기록되지 않는 삶을 증언의 자리로 옮겨 놓는다. 서로 다른 도시에서 출발한 두 작가의 사진은 밤과 주변부, 경계라는 지점에서 만난다. 《Terrain Vague》는 관람객에게 도시의 화려한 표면 아래 가려진 장소와 사람들, 그리고 그 사이에 놓인 이야기를 천천히 들여다보는 시간을 제안한다."
     },
     {
       "seq": "400673",
@@ -1675,7 +1755,8 @@
       "isFree": false,
       "isPermanent": false,
       "sourceUrl": "https://soma.kspo.or.kr/main",
-      "phone": "02-425-1077"
+      "phone": "02-425-1077",
+      "description": ""
     },
     {
       "seq": "401390",
@@ -1688,7 +1769,8 @@
       "isFree": false,
       "isPermanent": false,
       "sourceUrl": "https://galleryjiha.com/home",
-      "phone": "갤러리 지하"
+      "phone": "갤러리 지하",
+      "description": ""
     },
     {
       "seq": "400898",
@@ -1701,7 +1783,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://www.instagram.com/becoming.gallery",
-      "phone": "비커밍갤러리 02-2666-7579"
+      "phone": "비커밍갤러리 02-2666-7579",
+      "description": ""
     },
     {
       "seq": "401161",
@@ -1714,7 +1797,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://rhogallery.com/ko/park-sungmin/",
-      "phone": "02-732-3558"
+      "phone": "02-732-3558",
+      "description": ""
     },
     {
       "seq": "401414",
@@ -1727,7 +1811,8 @@
       "isFree": false,
       "isPermanent": false,
       "sourceUrl": "https://galleryjiha.com/home",
-      "phone": "갤러리 지하"
+      "phone": "갤러리 지하",
+      "description": ""
     },
     {
       "seq": "400692",
@@ -1740,7 +1825,8 @@
       "isFree": false,
       "isPermanent": false,
       "sourceUrl": "https://soma.kspo.or.kr/main",
-      "phone": "02-425-1077"
+      "phone": "02-425-1077",
+      "description": ""
     },
     {
       "seq": "365700",
@@ -1752,8 +1838,9 @@
       "price": "미정",
       "isFree": false,
       "isPermanent": false,
-      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&amp;exhId=202601160002037",
-      "phone": "국립현대미술관 02‒3701‒9500"
+      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&exhId=202601160002037",
+      "phone": "국립현대미술관 02‒3701‒9500",
+      "description": "1970년대 인쇄 출판 분야에 한글 가로쓰기가 도입된 이후 그래픽 디자인의 변천사를 추적하는 전시다. 아날로그에서 디지털로 전환하는 환경 속에서 텍스트와 이미지의 관계를 연구해 온 디자이너의 활동상을 시대별로 재구성할 예정이다. 전시에서는 1970-80년대 사진 식자와 옵셋 인쇄 기술의 부흥기, 1980-90년대 그래픽 툴과 웹 환경으로의 이행기를 거쳐 오늘날 물질과 비물질을 넘나드는 실험적인 시도를 선보인다. 이 전시는 그래픽 디자인 실천의 흐름 속에서 기술 발전과 시각 문화의 역동적인 관계를 살피는 가운데 한국미술의 저변을 확장하려는 시도이다."
     },
     {
       "seq": "389531",
@@ -1766,7 +1853,8 @@
       "isFree": true,
       "isPermanent": false,
       "sourceUrl": "https://www.finecharacter.kr",
-      "phone": "파인캐릭터 031-921-6325"
+      "phone": "파인캐릭터 031-921-6325",
+      "description": ""
     },
     {
       "seq": "365419",
@@ -1778,8 +1866,9 @@
       "price": "미정",
       "isFree": false,
       "isPermanent": false,
-      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&amp;exhId=202601120002030",
-      "phone": "국립현대미술관 덕수궁관 02-2022-0600"
+      "sourceUrl": "https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&exhId=202601120002030",
+      "phone": "국립현대미술관 덕수궁관 02-2022-0600",
+      "description": "한국전쟁 이후, 파리를 ‘현대예술의 수도’로 여긴 적지 않은 한국의 미술가들이 프랑스로 건너갔다. 이들은 2차 세계대전 이후 국제 미술의 중심을 두고 뉴욕과 경쟁하며 모더니즘의 영광을 되살리고자 했던 파리 미술계에서, 전 세계에서 건너온 미술가들과 교류하며 다양하고 새로운 현대미술을 경험하고 자신만의 세계를 구축해갔다. 이번 전시는 한국 미술가 최초로 1925년 파리로 건너간 이종우를 시작으로 1950-70년대 도불한 한국 미술가들의 예술세계를 입체적으로 조명한다. 전시는 낯선 장소에서 민족적 정체성을 모색하며 현대화를 추구하거나, 새로운 주제 탐구 및 매체 실험을 통해 미술의 경계를 확장한 도불(渡佛)작가들의 다양한 예술세계를 탐험하면서 이방인으로서 이들의 삶과 예술이 지닌 의미와 가치를 고찰한다."
     }
   ]
 }
