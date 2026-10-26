@@ -64,3 +64,17 @@
 - 화면 표기 코드는 `public/common.js` 한 곳에 있고 서버와 브라우저가 같이 쓴다.
 - 커스텀 도메인을 붙이면 환경변수 `SITE_URL`(예: `https://example.kr`)로 canonical·sitemap 주소를 고정한다.
 - 로컬 미리보기: `npm run dev` (배포 사본 데이터). 실데이터로 보려면 `DATA_URL=<운영 주소>/api/exhibitions npm run dev`.
+
+## 모아 보기·전시장·아카이브·내 전시 (2026-10-27)
+
+| 주소 | 내용 |
+|---|---|
+| `/ending-soon` | 일주일 안에 끝나는 전시 |
+| `/free` | 무료 전시 |
+| `/gu/{구}` | 구별 전시 (진행 중 전시가 있는 구만) |
+| `/venues/{장소 id}` | 전시장: 지금 하는 전시 + 지난 전시 |
+| `/archive` | 끝난 전시를 끝난 달별로 |
+| `/me` | 내 전시: 가볼래요·다녀왔어요 기록 (브라우저 localStorage, 색인 안 함) |
+
+- **아카이브**: `api/collect.js`가 매일 수집할 때 직전 수집본과 새 수집본을 Blob `archive.json`에 합친다(`lib/archive.mjs`). 끝난 전시 상세는 404 대신 '종료된 전시'로 남는다.
+- **내 전시**: `public/mine.js`(저장), `public/mine-ui.js`(카드 버튼·상세 패널), `public/me.js`(내 전시 페이지). 저장할 때 전시 스냅샷을 같이 남겨, 전시가 끝나도 기록이 보인다. 파일 내보내기·불러오기로 기기 이동.

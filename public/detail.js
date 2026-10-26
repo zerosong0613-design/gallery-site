@@ -1,4 +1,5 @@
 import { detailHtml, dotted, loadExhibitions, seoulDate } from './common.js';
+import './mine-ui.js';
 
 // 상세는 서버가 완성해서 보낸다(api/site.js). 여기서는 깨진 포스터만 치운다.
 // 서버 렌더 없이 정적 파일로 열린 경우(로컬 serve)에만 브라우저에서 그린다.
