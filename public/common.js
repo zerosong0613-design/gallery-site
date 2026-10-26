@@ -37,6 +37,7 @@ export function decodeEntities(text) {
 const safeUrl = (url) => (/^https?:\/\//i.test(url ?? '') ? url : '');
 
 export function leftLabel(e) {
+  if (e.ended) return { text: '종료', soon: false };
   if (e.upcoming) return { text: `${e.daysToStart}일 뒤 시작`, soon: false };
   if (e.isPermanent) return { text: '상설', soon: false };
   if (e.daysLeft === 0) return { text: '오늘 종료', soon: true };
@@ -49,12 +50,34 @@ export const priceParts = (e) => e.price.split(/\s*\/\s*/).filter(Boolean);
 
 // 상세는 /exhibitions/{seq}. 어느 페이지에서 링크해도 같은 곳으로 가도록 절대 경로를 쓴다.
 export const detailHref = (e) => `/exhibitions/${encodeURIComponent(e.seq)}`;
+export const venueHref = (v) => `/venues/${encodeURIComponent(v.id)}`;
+
+// '내 전시'에 저장할 때 함께 남기는 전시 정보. 전시가 끝나 목록에서 빠져도 기록을 그릴 수 있게.
+export function snapOf(e) {
+  return {
+    seq: String(e.seq),
+    title: e.title,
+    venue: e.venue?.name ?? '',
+    sigungu: e.venue?.sigungu ?? '',
+    start: e.start,
+    end: e.end,
+    thumbnail: e.thumbnail ?? '',
+    price: e.price ?? '',
+    isFree: Boolean(e.isFree),
+  };
+}
+
+const snapAttr = (e) => escapeHtml(JSON.stringify(snapOf(e)));
+
+const SAVE_ICONS = '<svg class="icon i-wish" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v16l-5-4-5 4z"/></svg>'
+  + '<svg class="icon i-done" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 
 // 수집본(JSON)을 화면용 목록으로 바꾼다. 끝난 전시는 뺀다.
-export function prepare(data, today = seoulToday()) {
+// includeEnded: 아카이브(끝난 전시)까지 포함한다. 끝난 전시는 ended: true.
+export function prepare(data, today = seoulToday(), { includeEnded = false } = {}) {
   const venues = new Map(data.venues.map((v) => [v.id, { ...v, name: decodeEntities(v.name), url: safeUrl(v.url) }]));
   const exhibitions = data.exhibitions
-    .filter((e) => e.end >= today && venues.has(e.venueId))
+    .filter((e) => (includeEnded || e.end >= today) && venues.has(e.venueId))
     .map((e) => ({
       ...e,
       title: decodeEntities(e.title),
@@ -62,12 +85,13 @@ export function prepare(data, today = seoulToday()) {
       sourceUrl: safeUrl(e.sourceUrl),
       venue: venues.get(e.venueId),
       upcoming: e.start > today,
+      ended: e.end < today,
       daysLeft: daysBetween(today, e.end),
       isPermanent: e.isPermanent && daysBetween(today, e.end) > PERMANENT_ENDING_DAYS,
       daysToStart: daysBetween(today, e.start),
       km: null,
     }));
-  return { today, updatedAt: data.updatedAt, exhibitions };
+  return { today, updatedAt: data.updatedAt, exhibitions, venues };
 }
 
 export async function loadExhibitions() {
@@ -132,7 +156,8 @@ export function cardHtml(e) {
     <dl class="facts">
       <dt>기간</dt><dd>${period(e.start, e.end)}</dd>
       <dt>관람료</dt><dd>${cardPriceHtml(e)}</dd>
-    </dl></a></li>`;
+    </dl></a>
+    <button class="save" type="button" data-snap="${snapAttr(e)}" aria-pressed="false" aria-label="가볼래요">${SAVE_ICONS}</button></li>`;
 }
 
 export function summaryText(today, exhibitions) {
@@ -196,17 +221,23 @@ export function detailHtml(e, exhibitions) {
     <article class="detail">
       <div class="d-poster"><img src="${escapeHtml(e.thumbnail)}" alt="${escapeHtml(e.title)} 포스터"></div>
       <div class="d-body">
-        <span class="status${left.soon ? ' soon' : ''}">${e.upcoming ? '곧 시작' : e.isPermanent ? '상설 전시' : '진행 중'}</span>
+        <span class="status${left.soon ? ' soon' : ''}${e.ended ? ' ended' : ''}">${e.ended ? '종료된 전시' : e.upcoming ? '곧 시작' : e.isPermanent ? '상설 전시' : '진행 중'}</span>
         <h1>${escapeHtml(e.title)}</h1>
-        <p class="venue">${escapeHtml(venue.name)} · ${escapeHtml(venue.sigungu)}</p>
+        <p class="venue"><a href="${venueHref(venue)}">${escapeHtml(venue.name)}</a> · ${escapeHtml(venue.sigungu)}</p>
+        ${e.ended ? `<p class="ended-note">${e.end.slice(0, 4)}년 ${Number(e.end.slice(5, 7))}월 ${Number(e.end.slice(8, 10))}일에 끝난 전시예요. 아래는 전시 당시 정보예요.</p>` : ''}
         ${description}
         <dl class="d-facts">
           <dt>기간</dt><dd>${periodHtml(e)}</dd>
           <dt>관람료</dt><dd>${detailPriceHtml(e)}</dd>
-          <dt>장소</dt><dd>${escapeHtml(venue.name)}</dd>
+          <dt>장소</dt><dd><a href="${venueHref(venue)}">${escapeHtml(venue.name)}</a></dd>
           ${address}
           ${phone}
         </dl>
+        <section class="mine" id="mine" data-snap="${snapAttr(e)}">
+          <h2>내 기록</h2>
+          <div class="mine-body"></div>
+          <p class="mine-note">기록은 이 기기의 브라우저에만 저장돼요. <a href="/me">내 전시 보기</a></p>
+        </section>
         <div class="actions">${source}${venueSite}</div>
         <div class="actions">${mapLinks(venue)}</div>
         ${othersHtml(e, exhibitions)}

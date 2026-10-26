@@ -46,6 +46,30 @@
       "destination": "/api/site?view=detail&seq=:seq"
     },
     {
+      "source": "/ending-soon",
+      "destination": "/api/site?view=ending-soon"
+    },
+    {
+      "source": "/free",
+      "destination": "/api/site?view=free"
+    },
+    {
+      "source": "/gu/:gu",
+      "destination": "/api/site?view=gu&gu=:gu"
+    },
+    {
+      "source": "/venues/:id",
+      "destination": "/api/site?view=venue&id=:id"
+    },
+    {
+      "source": "/archive",
+      "destination": "/api/site?view=archive"
+    },
+    {
+      "source": "/me",
+      "destination": "/api/site?view=me"
+    },
+    {
       "source": "/sitemap.xml",
       "destination": "/api/site?view=sitemap"
     }

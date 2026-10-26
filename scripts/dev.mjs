@@ -10,12 +10,16 @@ const PORT = Number(process.env.PORT ?? 4173);
 const ROOT = new URL('../public/', import.meta.url).pathname;
 const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png' };
 
-function route(pathname, searchParams) {
-  if (pathname === '/') return '/api/site?view=home';
-  if (pathname === '/sitemap.xml') return '/api/site?view=sitemap';
-  const m = pathname.match(/^\/exhibitions\/([^/]+)$/);
-  if (m) return `/api/site?view=detail&seq=${encodeURIComponent(decodeURIComponent(m[1]))}`;
-  return null;
+function route(pathname) {
+  // vercel.json 의 rewrites 와 같게 맞춘다.
+  const fixed = { '/': 'home', '/sitemap.xml': 'sitemap', '/ending-soon': 'ending-soon', '/free': 'free', '/archive': 'archive', '/me': 'me' };
+  if (fixed[pathname]) return `/api/site?view=${fixed[pathname]}`;
+  const m = pathname.match(/^\/(exhibitions|gu|venues)\/([^/]+)$/);
+  if (!m) return null;
+  const value = encodeURIComponent(decodeURIComponent(m[2]));
+  if (m[1] === 'exhibitions') return `/api/site?view=detail&seq=${value}`;
+  if (m[1] === 'gu') return `/api/site?view=gu&gu=${value}`;
+  return `/api/site?view=venue&id=${value}`;
 }
 
 async function send(res, response) {
@@ -31,7 +35,7 @@ createServer(async (req, res) => {
       res.writeHead(308, { location: seq ? `/exhibitions/${encodeURIComponent(seq)}` : '/' });
       return res.end();
     }
-    const target = route(url.pathname, url.searchParams);
+    const target = route(url.pathname);
     if (target) {
       const request = new Request(new URL(target, url), { headers: { host: url.host } });
       return send(res, await site(request));

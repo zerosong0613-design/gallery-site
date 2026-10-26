@@ -1,4 +1,5 @@
 import { FILTERS, byEnd, cardHtml, chipsHtml, dotted, guOptionsHtml, loadExhibitions, seoulDate, summaryText } from './common.js';
+import { syncSaveButtons } from './mine-ui.js';
 
 // 첫 화면은 서버가 이미 그려서 보낸다(api/site.js). 여기서는 필터·정렬·위치를 붙이고, 최신 수집본으로 다시 그린다.
 const state = { filter: 'now', sort: 'end', gu: '', position: null };
@@ -35,6 +36,7 @@ function render() {
   $('grid').innerHTML = list.length
     ? list.map(cardHtml).join('')
     : '<li class="empty">조건에 맞는 전시가 없어요. 필터를 바꿔 보세요.</li>';
+  syncSaveButtons($('grid'));
 }
 
 function locate() {
