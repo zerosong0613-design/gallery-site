@@ -9,5 +9,20 @@
   },
   "crons": [
     { "path": "/api/collect", "schedule": "0 20 * * *" }
+  ],
+  "redirects": [
+    {
+      "source": "/detail",
+      "has": [{ "type": "query", "key": "seq", "value": "(?<seq>[0-9]+)" }],
+      "destination": "/exhibitions/:seq",
+      "permanent": true
+    },
+    { "source": "/detail", "destination": "/", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/", "destination": "/api/site?view=home" },
+    { "source": "/exhibitions/:seq", "destination": "/api/site?view=detail&seq=:seq" },
+    { "source": "/sitemap.xml", "destination": "/api/site?view=sitemap" },
+    { "source": "/robots.txt", "destination": "/api/site?view=robots" }
   ]
 }

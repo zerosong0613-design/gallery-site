@@ -48,3 +48,19 @@
 ## 현재 상태
 
 기획 및 API 연결 요구사항을 정리한 초기 저장소. 실행 가능한 사이트 및 배포는 아직 완료되지 않았다.
+
+## 페이지 렌더링과 검색 노출 (2026-10-26)
+
+검색엔진·AI 크롤러·카카오톡 미리보기가 JS 없이도 내용을 읽도록, 페이지는 서버(`api/site.js`)가 완성된 HTML로 내려준다. 브라우저 JS(`app.js`, `detail.js`)는 그 위에서 필터·정렬·위치만 붙인다.
+
+| 주소 | 내용 |
+|---|---|
+| `/` | 진행 중 전시 목록, `WebSite`·`ItemList` JSON-LD |
+| `/exhibitions/{seq}` | 전시 상세, `ExhibitionEvent`·`BreadcrumbList` JSON-LD. 끝난 전시는 404 |
+| `/sitemap.xml` | 진행 중 전시 전체, lastmod = 수집일 |
+| `/robots.txt` | 프로덕션은 전체 허용, 프리뷰는 전체 차단 |
+| `/detail?seq=` | 예전 주소. `/exhibitions/{seq}`로 영구 이동 |
+
+- 화면 표기 코드는 `public/common.js` 한 곳에 있고 서버와 브라우저가 같이 쓴다.
+- 커스텀 도메인을 붙이면 환경변수 `SITE_URL`(예: `https://example.kr`)로 canonical·sitemap 주소를 고정한다.
+- 로컬 미리보기: `npm run dev` (배포 사본 데이터). 실데이터로 보려면 `DATA_URL=<운영 주소>/api/exhibitions npm run dev`.
