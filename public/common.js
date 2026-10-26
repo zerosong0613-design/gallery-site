@@ -8,6 +8,9 @@ export function seoulToday() {
   return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul' }).format(new Date());
 }
 
+// 수집 시각(UTC ISO)을 서울 날짜로 바꾼다. 새벽 5시 수집이 UTC로는 전날이라 그대로 자르면 하루 밀려 보인다.
+export const seoulDate = (iso) => new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul' }).format(new Date(iso));
+
 export const daysBetween = (from, to) => Math.round((Date.parse(to) - Date.parse(from)) / DAY_MS);
 export const dotted = (iso) => iso.replaceAll('-', '.');
 
