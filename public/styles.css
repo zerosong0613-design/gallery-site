@@ -519,6 +519,18 @@ button.btn { font: inherit; font-size: var(--fs-sm); font-weight: 600; backgroun
   border: 1px solid var(--line); border-radius: var(--r-sm); padding: var(--sp-2) var(--sp-3);
 }
 .field textarea { resize: vertical; }
+/* iOS 사파리는 날짜 칸에 고유 너비·가운데 정렬을 줘서 박스 밖으로 넘친다. 기본 모양을 끄고 다른 칸과 맞춘다. */
+.field input[type='date'] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 42px;
+  line-height: 24px;
+  text-align: left;
+}
+.field input[type='date']::-webkit-date-and-time-value { text-align: left; margin: 0; }
 
 /* ── 내 전시 ───────────────────────────────────────────── */
 .page-head .chips { margin-top: var(--sp-4); }
