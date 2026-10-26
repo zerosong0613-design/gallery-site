@@ -3,7 +3,7 @@ import { daysBetween, detailHref, dotted, escapeHtml, period, seoulToday } from 
 import * as mine from './mine.js';
 
 const $ = (id) => document.getElementById(id);
-const state = { tab: location.hash === '#wish' ? 'wish' : 'visited' };
+const state = { tab: location.hash === '#wish' ? 'wish' : 'visited', editing: null };
 
 function thumb(r) {
   return r.thumbnail
@@ -34,7 +34,39 @@ function rowHtml(r, today) {
         <p class="m-period">${period(r.start, r.end)}</p>
         ${when}
         ${r.memo ? `<p class="m-memo">${escapeHtml(r.memo)}</p>` : ''}
-      </div></a></li>`;
+      </div></a>
+      ${state.editing === r.seq ? formHtml(r, today) : actionsHtml(r, today)}</li>`;
+}
+
+// 기록 고치기·지우기를 이 페이지에서 바로 한다. 상세 페이지로 갈 필요 없이.
+function actionsHtml(r, today) {
+  const seq = escapeHtml(r.seq);
+  if (r.visited) {
+    return `<div class="m-actions">
+        <button class="btn sm" type="button" data-act="edit" data-seq="${seq}">기록 고치기</button>
+        <button class="btn sm" type="button" data-act="delete" data-seq="${seq}">지우기</button>
+      </div>`;
+  }
+  return `<div class="m-actions">
+      ${r.start <= today ? `<button class="btn sm" type="button" data-act="edit" data-seq="${seq}">다녀왔어요</button>` : ''}
+      <button class="btn sm" type="button" data-act="delete" data-seq="${seq}">목록에서 빼기</button>
+    </div>`;
+}
+
+function formHtml(r, today) {
+  // 관람일은 전시 기간 안, 오늘 이전으로 제한한다.
+  const max = r.end < today ? r.end : today;
+  const value = r.visited ?? (max >= r.start ? max : r.start);
+  return `<form class="mine-form m-form" data-seq="${escapeHtml(r.seq)}">
+      <label class="field"><span>다녀온 날</span>
+        <input type="date" name="date" value="${value}" min="${r.start}" max="${max}" required></label>
+      <label class="field"><span>한 줄 기록 <em>(선택)</em></span>
+        <textarea name="memo" rows="3" maxlength="500" placeholder="누구랑, 무엇이 좋았는지">${escapeHtml(r.memo ?? '')}</textarea></label>
+      <div class="actions">
+        <button class="btn primary" type="submit">저장</button>
+        <button class="btn" type="button" data-act="cancel">취소</button>
+      </div>
+    </form>`;
 }
 
 function groupedVisited(list, today) {
@@ -112,6 +144,31 @@ function init() {
       $('backup-note').textContent = err.message.includes('오늘전시') ? err.message : '파일을 읽지 못했어요. 오늘전시에서 내보낸 파일인지 확인해 주세요.';
     }
     ev.target.value = '';
+  });
+  $('list').addEventListener('click', (ev) => {
+    const btn = ev.target.closest('[data-act]');
+    if (!btn) return;
+    const { act, seq } = btn.dataset;
+    if (act === 'edit') state.editing = seq;
+    if (act === 'cancel') state.editing = null;
+    if (act === 'delete') {
+      const rec = mine.get(seq);
+      const what = rec?.visited ? '이 관람 기록을 지울까요?' : '가볼 전시 목록에서 뺄까요?';
+      if (!rec || !confirm(`${what}\n${rec.title}`)) return;
+      state.editing = null;
+      mine.remove(seq);
+      return; // remove 가 change 이벤트로 다시 그린다.
+    }
+    render();
+    if (act === 'edit') $('list').querySelector('.m-form input')?.focus();
+  });
+  $('list').addEventListener('submit', (ev) => {
+    ev.preventDefault();
+    const rec = mine.get(ev.target.dataset.seq);
+    if (!rec) return;
+    const form = new FormData(ev.target);
+    state.editing = null;
+    mine.setVisited(rec, String(form.get('date')), String(form.get('memo') ?? '').trim());
   });
   mine.onChange(render);
   window.addEventListener('storage', render);
