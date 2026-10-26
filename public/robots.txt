@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gallery-site-opal.vercel.app/sitemap.xml
+Sitemap: https://oneul-jeonsi.vercel.app/sitemap.xml
