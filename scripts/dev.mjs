@@ -13,7 +13,6 @@ const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; ch
 function route(pathname, searchParams) {
   if (pathname === '/') return '/api/site?view=home';
   if (pathname === '/sitemap.xml') return '/api/site?view=sitemap';
-  if (pathname === '/robots.txt') return '/api/site?view=robots';
   const m = pathname.match(/^\/exhibitions\/([^/]+)$/);
   if (m) return `/api/site?view=detail&seq=${encodeURIComponent(decodeURIComponent(m[1]))}`;
   return null;
