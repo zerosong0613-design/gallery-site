@@ -441,8 +441,9 @@ footer p { margin: 0 0 var(--sp-1); }
   position: absolute;
   top: var(--sp-2);
   right: var(--sp-2);
-  width: 36px;
-  height: 36px;
+  /* 보이는 크기는 '오늘 종료' 배지 높이에 맞춰 작게, 누르는 영역은 ::before 로 40px 확보 */
+  width: 26px;
+  height: 26px;
   display: grid;
   place-items: center;
   padding: 0;
@@ -452,7 +453,9 @@ footer p { margin: 0 0 var(--sp-1); }
   border-radius: var(--r-sm);
   cursor: pointer;
 }
-.save .icon { width: 18px; height: 18px; }
+.save::before { content: ''; position: absolute; inset: -7px; }
+.save .icon { width: 14px; height: 14px; }
+.save:not([data-state='wish']):not([data-state='visited']) { background: rgba(255, 253, 248, 0.85); border-color: transparent; }
 .save .i-done { display: none; }
 .save[data-state='wish'] { color: #fff; background: var(--accent); border-color: var(--accent); }
 .save[data-state='wish'] .i-wish { fill: currentColor; }
