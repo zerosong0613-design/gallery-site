@@ -3,8 +3,11 @@
   "configurations": [
     {
       "name": "site",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["--yes", "serve", "public", "-l", "4173"],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 4173
     }
   ]
