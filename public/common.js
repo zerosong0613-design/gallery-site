@@ -1,6 +1,8 @@
 // 목록·상세 화면이 함께 쓰는 데이터 정리와 표기 규칙.
 // 브라우저와 서버 렌더러(api/site.js)가 같은 파일을 쓴다. 그래서 DOM 이나 window 에 기대지 않는다.
 export const SOON_DAYS = 7;
+// 수집 단계에서 기간이 1년을 넘으면 상설로 본다. 그래도 종료일이 이만큼 다가오면 기획전처럼 남은 날을 보여 준다.
+export const PERMANENT_ENDING_DAYS = 60;
 const DAY_MS = 86_400_000;
 
 // 사용자 시간대와 무관하게 서울 날짜를 쓴다.
@@ -61,6 +63,7 @@ export function prepare(data, today = seoulToday()) {
       venue: venues.get(e.venueId),
       upcoming: e.start > today,
       daysLeft: daysBetween(today, e.end),
+      isPermanent: e.isPermanent && daysBetween(today, e.end) > PERMANENT_ENDING_DAYS,
       daysToStart: daysBetween(today, e.start),
       km: null,
     }));
