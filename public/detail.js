@@ -18,7 +18,7 @@ async function renderInBrowser() {
       $('detail').innerHTML = '<p class="empty">끝났거나 목록에 없는 전시예요. <a href="/">진행 중인 전시 보기</a></p>';
       return;
     }
-    document.title = `${found.title} — 서울 전시`;
+    document.title = `${found.title} | 오늘전시`;
     $('detail').innerHTML = detailHtml(found, exhibitions);
     bindPoster();
   } catch {
