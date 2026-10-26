@@ -1,4 +1,4 @@
-import { FILTERS, byEnd, cardHtml, chipsHtml, dotted, guOptionsHtml, loadExhibitions, summaryText } from './common.js';
+import { FILTERS, byEnd, cardHtml, chipsHtml, dotted, guOptionsHtml, loadExhibitions, seoulDate, summaryText } from './common.js';
 
 // 첫 화면은 서버가 이미 그려서 보낸다(api/site.js). 여기서는 필터·정렬·위치를 붙이고, 최신 수집본으로 다시 그린다.
 const state = { filter: 'now', sort: 'end', gu: '', position: null };
@@ -77,7 +77,7 @@ async function init() {
   exhibitions = loaded.exhibitions;
 
   $('summary').textContent = summaryText(loaded.today, exhibitions);
-  $('updated').textContent = `${dotted(loaded.updatedAt.slice(0, 10))} 수집.`;
+  $('updated').textContent = `${dotted(seoulDate(loaded.updatedAt))} 수집.`;
   $('gu').innerHTML = guOptionsHtml(exhibitions);
 
   $('chips').addEventListener('click', (ev) => {
