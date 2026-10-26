@@ -2,7 +2,7 @@
 //   /                    → view=home
 //   /exhibitions/{seq}   → view=detail
 //   /sitemap.xml         → view=sitemap
-//   /robots.txt          → view=robots
+//   (robots.txt 는 public/robots.txt 정적 파일. 네이버 진단이 HEAD 요청으로 확인한다.)
 import { detailPage, homePage, loadData, robots, sitemap, siteOrigin } from '../lib/site.mjs';
 
 export async function GET(request) {
@@ -10,7 +10,7 @@ export async function GET(request) {
   const view = params.get('view') ?? 'home';
   const origin = siteOrigin(request);
 
-  if (view === 'robots') return robots(origin);
+  if (view === 'robots') return robots(origin); // 예전 경로 호환
 
   let data;
   try {
@@ -26,4 +26,10 @@ export async function GET(request) {
   if (view === 'sitemap') return sitemap(data, origin);
   if (view === 'detail') return detailPage(data, origin, params.get('seq') ?? '');
   return homePage(data, origin);
+}
+
+// 크롤러와 진단 도구가 HEAD 로 먼저 확인하는 경우가 있어 본문 없이 같은 상태·헤더를 돌려준다.
+export async function HEAD(request) {
+  const res = await GET(request);
+  return new Response(null, { status: res.status, headers: res.headers });
 }
