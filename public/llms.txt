@@ -1,0 +1,18 @@
+# 오늘전시
+
+> 서울에서 지금 열리는 전시의 기간과 관람료를 매일 모아 보여주는 사이트. 자료는 한국문화정보원 '한눈에보는문화정보'(공공데이터포털)이며 매일 새벽 5시(한국 시간)에 갱신한다. 휴관일과 운영시간은 싣지 않는다.
+
+## 목록
+- [진행 중인 서울 전시](https://oneul-jeonsi.vercel.app/): 곧 끝나는 순, 구별 필터
+- [이번 주 끝나는 서울 전시](https://oneul-jeonsi.vercel.app/ending-soon)
+- [지금 무료로 볼 수 있는 서울 전시](https://oneul-jeonsi.vercel.app/free)
+- [지난 전시](https://oneul-jeonsi.vercel.app/archive): 끝난 전시를 끝난 달별로
+
+## 페이지 구조
+- 전시 상세: /exhibitions/{번호} — 기간, 관람료, 장소, 주소, 안내 페이지 링크
+- 전시장: /venues/{번호} — 그 전시장에서 지금 하는 전시와 지난 전시
+- 구별: /gu/{구 이름}
+- 전체 주소 목록: [sitemap.xml](https://oneul-jeonsi.vercel.app/sitemap.xml)
+
+## 소개
+- [오늘전시 소개](https://oneul-jeonsi.vercel.app/about): 자료 출처, 갱신 방식, 싣지 않는 정보

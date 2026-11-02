@@ -66,6 +66,10 @@
       "destination": "/api/site?view=archive"
     },
     {
+      "source": "/about",
+      "destination": "/api/site?view=about"
+    },
+    {
       "source": "/me",
       "destination": "/api/site?view=me"
     },

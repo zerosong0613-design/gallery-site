@@ -72,10 +72,23 @@ const snapAttr = (e) => escapeHtml(JSON.stringify(snapOf(e)));
 const SAVE_ICONS = '<svg class="icon i-wish" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v16l-5-4-5 4z"/></svg>'
   + '<svg class="icon i-done" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
 
+// 원자료 주소가 '서울특별시 강남구 테헤란로20길 12 서울 강남구 테헤란로20길 12' 처럼 같은 주소를 두 번 담아 오는 경우가 있다.
+// 뒤 절반이 앞 절반과 같은 주소면(서울특별시/서울 표기 차이는 무시) 앞 절반만 남긴다.
+export function cleanAddress(address) {
+  const text = String(address ?? '').trim().replace(/\s+/g, ' ');
+  const words = text.split(' ');
+  const norm = (list) => list.join(' ').replace(/^서울(특별)?시(?= |$)/, '서울');
+  for (let k = 1; k < words.length; k++) {
+    if (!/^서울/.test(words[k])) continue;
+    if (norm(words.slice(0, k)) === norm(words.slice(k))) return words.slice(0, k).join(' ');
+  }
+  return text;
+}
+
 // 수집본(JSON)을 화면용 목록으로 바꾼다. 끝난 전시는 뺀다.
 // includeEnded: 아카이브(끝난 전시)까지 포함한다. 끝난 전시는 ended: true.
 export function prepare(data, today = seoulToday(), { includeEnded = false } = {}) {
-  const venues = new Map(data.venues.map((v) => [v.id, { ...v, name: decodeEntities(v.name), url: safeUrl(v.url) }]));
+  const venues = new Map(data.venues.map((v) => [v.id, { ...v, name: decodeEntities(v.name), url: safeUrl(v.url), address: cleanAddress(v.address) }]));
   const exhibitions = data.exhibitions
     .filter((e) => (includeEnded || e.end >= today) && venues.has(e.venueId))
     .map((e) => ({
@@ -143,15 +156,20 @@ function cardPriceHtml(e) {
   return `<span class="price">${e.isFree ? '<span class="free">무료</span> ' : ''}${escapeHtml(priceParts(e).join(' · '))}</span>`;
 }
 
-export function cardHtml(e) {
+// 첫 화면에 보이는 포스터는 바로 받는다. 모바일 2열 × 2줄, 넓은 화면 첫 줄이 이 안에 든다.
+// 나머지는 스크롤할 때 받는다. list.map(cardHtml) 이 넘기는 순번(i)을 쓴다.
+const EAGER_CARDS = 4;
+
+export function cardHtml(e, i = EAGER_CARDS) {
   const left = leftLabel(e);
   const distance = e.km == null ? '' : ` · ${formatKm(e.km)}`;
+  const loading = i < EAGER_CARDS ? (i === 0 ? ' fetchpriority="high"' : '') : ' loading="lazy"';
   return `<li class="card"><a href="${detailHref(e)}">
     <div class="poster">
-      <img src="${escapeHtml(e.thumbnail)}" alt="${escapeHtml(e.title)} 포스터" loading="lazy" data-title="${escapeHtml(e.title)}">
+      <img src="${escapeHtml(e.thumbnail)}" alt="${escapeHtml(e.title)} 포스터"${loading} data-title="${escapeHtml(e.title)}">
       <span class="badge${left.soon ? ' soon' : ''}">${left.text}</span>
     </div>
-    <h2>${escapeHtml(e.title)}</h2>
+    <h3>${escapeHtml(e.title)}</h3>
     <p class="venue">${escapeHtml(e.venue.name)} · ${escapeHtml(e.venue.sigungu)}${distance}</p>
     <dl class="facts">
       <dt>기간</dt><dd>${period(e.start, e.end)}</dd>
@@ -202,12 +220,38 @@ function othersHtml(e, exhibitions) {
   return `<section class="others"><h2>${escapeHtml(e.venue.name)}의 다른 전시</h2><ul>${rows}</ul></section>`;
 }
 
+// '2026년 10월 14일부터 11월 2일까지'. 같은 해면 뒤쪽 연도는 뺀다.
+function koreanRange(start, end) {
+  const part = (iso, withYear) => `${withYear ? `${iso.slice(0, 4)}년 ` : ''}${Number(iso.slice(5, 7))}월 ${Number(iso.slice(8, 10))}일`;
+  return `${part(start, true)}부터 ${part(end, start.slice(0, 4) !== end.slice(0, 4))}까지`;
+}
+
+// 검색 결과와 AI 답변이 그대로 옮겨 쓸 수 있는 한 문장. 소개글이 없는 전시도 이 문장은 갖는다.
+// 예: '서울 종로구 인사아트센터에서 2026년 10월 14일부터 11월 2일까지 열리는 전시예요. 관람료는 무료예요.'
+export function answerText(e) {
+  const where = `서울 ${e.venue.sigungu ? `${e.venue.sigungu} ` : ''}${e.venue.name}에서`;
+  const verb = e.ended ? '열린' : e.upcoming ? '열릴' : '열리는';
+  const kind = !e.ended && e.isPermanent ? '장기 전시' : '전시';
+  const fee = e.isFree ? ' 관람료는 무료예요.' : '';
+  return `${where} ${koreanRange(e.start, e.end)} ${verb} ${kind}예요.${fee}`;
+}
+
+// '+82 (0)507-1395-4728, a@b.com' 처럼 번호 뒤에 다른 연락처가 붙거나 국가번호 뒤에 0 이 남은 값이 있다.
+// 첫 번호만 전화 링크로 만들고, 나머지는 글자로 둔다.
+function phoneHtml(raw) {
+  const match = raw.match(/\+?[\d()\s-]{7,}\d/);
+  if (!match) return escapeHtml(raw);
+  let digits = match[0].replace(/[^\d+]/g, '');
+  if (digits.startsWith('+820')) digits = `+82${digits.slice(4)}`;
+  const before = raw.slice(0, match.index);
+  const after = raw.slice(match.index + match[0].length);
+  return `${escapeHtml(before)}<a href="tel:${escapeHtml(digits)}">${escapeHtml(match[0].trim())}</a>${escapeHtml(after)}`;
+}
+
 export function detailHtml(e, exhibitions) {
   const { venue } = e;
   const left = leftLabel(e);
-  const phone = e.phone && /\d/.test(e.phone)
-    ? `<dt>문의</dt><dd><a href="tel:${escapeHtml(e.phone.replace(/[^\d+]/g, ''))}">${escapeHtml(e.phone)}</a></dd>`
-    : '';
+  const phone = e.phone && /\d/.test(e.phone) ? `<dt>문의</dt><dd>${phoneHtml(e.phone)}</dd>` : '';
   const address = venue.address ? `<dt>주소</dt><dd>${escapeHtml(venue.address)}</dd>` : '';
   const source = e.sourceUrl
     ? `<a class="btn primary" href="${escapeHtml(e.sourceUrl)}" target="_blank" rel="noopener">전시 안내 페이지 ${EXTERNAL_ICON}</a>`
@@ -219,12 +263,13 @@ export function detailHtml(e, exhibitions) {
 
   return `
     <article class="detail">
-      <div class="d-poster"><img src="${escapeHtml(e.thumbnail)}" alt="${escapeHtml(e.title)} 포스터"></div>
+      <div class="d-poster"><img src="${escapeHtml(e.thumbnail)}" alt="${escapeHtml(e.title)} 포스터" fetchpriority="high"></div>
       <div class="d-body">
         <span class="status${left.soon ? ' soon' : ''}${e.ended ? ' ended' : ''}">${e.ended ? '종료된 전시' : e.upcoming ? '곧 시작' : e.isPermanent ? '상설 전시' : '진행 중'}</span>
         <h1>${escapeHtml(e.title)}</h1>
         <p class="venue"><a href="${venueHref(venue)}">${escapeHtml(venue.name)}</a> · ${escapeHtml(venue.sigungu)}</p>
-        ${e.ended ? `<p class="ended-note">${e.end.slice(0, 4)}년 ${Number(e.end.slice(5, 7))}월 ${Number(e.end.slice(8, 10))}일에 끝난 전시예요. 아래는 전시 당시 정보예요.</p>` : ''}
+        <p class="answer">${escapeHtml(answerText(e))}</p>
+        ${e.ended ? '<p class="ended-note">끝난 전시라 아래는 전시 당시 정보예요.</p>' : ''}
         ${description}
         <dl class="d-facts">
           <dt>기간</dt><dd>${periodHtml(e)}</dd>

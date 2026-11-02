@@ -97,6 +97,8 @@ body {
 }
 
 .masthead h1 a { color: inherit; text-decoration: none; }
+/* 검색엔진이 읽는 h1 에 무엇을 하는 사이트인지 함께 둔다. 보이는 크기는 작게. */
+.masthead h1 .h1-sub { display: block; margin-top: 2px; font-family: var(--font-body); font-size: var(--fs-sm); font-weight: 400; color: var(--ink-2); letter-spacing: 0; }
 
 .masthead p {
   margin: var(--sp-1) 0 0;
@@ -223,7 +225,7 @@ select {
 }
 .badge.soon { background: var(--accent); color: #fff; }
 
-.card h2 {
+.card h3 {
   margin: var(--sp-3) 0 var(--sp-1);
   font-family: var(--font-display);
   font-size: var(--fs-md);
@@ -232,7 +234,7 @@ select {
   word-break: keep-all;
   overflow-wrap: anywhere;
 }
-.card a:hover h2 { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.card a:hover h3 { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 
 .venue {
   margin: 0;
@@ -297,7 +299,8 @@ select {
   border-radius: var(--r-sm);
   overflow: hidden;
 }
-.d-poster img { display: block; width: 100%; max-height: 80vh; object-fit: contain; }
+/* 이미지가 늦게 와도 아래 글이 밀리지 않게 포스터 자리를 먼저 잡는다(목록 카드와 같은 5:7). */
+.d-poster img { display: block; width: 100%; aspect-ratio: 5 / 7; max-height: 80vh; object-fit: contain; }
 
 .d-body { margin-top: var(--sp-5); }
 
@@ -322,6 +325,7 @@ select {
   overflow-wrap: anywhere;
 }
 
+.answer { margin: var(--sp-3) 0 0; font-size: var(--fs-md); color: var(--ink); }
 .description { margin: var(--sp-4) 0 0; color: var(--ink-2); white-space: pre-line; }
 
 .d-facts {
@@ -400,7 +404,7 @@ footer p { margin: 0 0 var(--sp-1); }
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: var(--sp-6) var(--sp-5);
   }
-  .card h2 { font-size: var(--fs-lg); }
+  .card h3 { font-size: var(--fs-lg); }
   .facts {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -572,3 +576,11 @@ button.btn { font: inherit; font-size: var(--fs-sm); font-weight: 600; backgroun
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* ── 소개 ───────────────────────────────────────────────── */
+.about { max-width: 640px; padding-bottom: var(--sp-6); }
+.about h2 { margin: var(--sp-5) 0 var(--sp-2); font-family: var(--font-display); font-size: var(--fs-lg); font-weight: 600; }
+.about p, .about li { color: var(--ink-2); }
+.about ul { padding-left: 1.2em; margin: 0; }
+.about a { color: var(--ink); text-underline-offset: 3px; }
+footer a { color: inherit; text-underline-offset: 3px; }

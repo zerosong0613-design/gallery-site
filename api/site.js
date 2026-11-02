@@ -1,7 +1,7 @@
 // 사람과 크롤러가 여는 모든 페이지를 서버에서 그린다. vercel.json 의 rewrites 가 이 함수로 보낸다.
 // 페이지 목록은 lib/site.mjs 맨 위에 있다. robots.txt 는 public/robots.txt 정적 파일.
 import {
-  archivePage, detailPage, endingSoonPage, freePage, guPage, homePage, loadData, mePage, robots, sitemap, siteOrigin,
+  aboutPage, archivePage, detailPage, endingSoonPage, freePage, guPage, homePage, loadData, mePage, robots, sitemap, siteOrigin,
   venuePage,
 } from '../lib/site.mjs';
 
@@ -32,6 +32,7 @@ export async function GET(request) {
     case 'gu': return guPage(loaded, origin, params.get('gu') ?? '');
     case 'venue': return venuePage(loaded, origin, params.get('id') ?? '');
     case 'archive': return archivePage(loaded, origin);
+    case 'about': return aboutPage(loaded, origin);
     default: return homePage(loaded, origin);
   }
 }
