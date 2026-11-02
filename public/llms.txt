@@ -15,4 +15,5 @@
 - 전체 주소 목록: [sitemap.xml](https://oneul-jeonsi.vercel.app/sitemap.xml)
 
 ## 소개
-- [오늘전시 소개](https://oneul-jeonsi.vercel.app/about): 자료 출처, 갱신 방식, 싣지 않는 정보
+- [오늘전시 소개](https://oneul-jeonsi.vercel.app/about): 자료 출처, 갱신 방식, 싣지 않는 정보, 운영자
+- 운영: AI하는 송송 변호사 (aimejin@naver.com)
