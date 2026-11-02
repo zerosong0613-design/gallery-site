@@ -12,7 +12,7 @@ const TYPES = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; ch
 
 function route(pathname) {
   // vercel.json 의 rewrites 와 같게 맞춘다.
-  const fixed = { '/': 'home', '/sitemap.xml': 'sitemap', '/ending-soon': 'ending-soon', '/free': 'free', '/archive': 'archive', '/me': 'me' };
+  const fixed = { '/': 'home', '/sitemap.xml': 'sitemap', '/ending-soon': 'ending-soon', '/free': 'free', '/archive': 'archive', '/about': 'about', '/me': 'me' };
   if (fixed[pathname]) return `/api/site?view=${fixed[pathname]}`;
   const m = pathname.match(/^\/(exhibitions|gu|venues)\/([^/]+)$/);
   if (!m) return null;
