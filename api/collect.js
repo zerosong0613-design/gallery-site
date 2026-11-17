@@ -1,18 +1,8 @@
 // Vercel Cron 이 하루 한 번 호출한다. 수집 결과를 Blob 에 덮어쓰고, 끝난 전시는 아카이브에 쌓는다.
-import { head, put } from '@vercel/blob';
+import { put } from '@vercel/blob';
 import { ARCHIVE_PATH, mergeArchive } from '../lib/archive.mjs';
-import { CACHE_PATH } from '../lib/cache.mjs';
+import { CACHE_PATH, readBlob } from '../lib/cache.mjs';
 import { collect } from '../lib/cultureinfo.mjs';
-
-async function readBlob(path) {
-  try {
-    const { url } = await head(path);
-    const res = await fetch(url, { cache: 'no-store' });
-    return res.ok ? await res.json() : null;
-  } catch {
-    return null;
-  }
-}
 
 const putJson = (path, data) => put(path, JSON.stringify(data), {
   access: 'public',
@@ -33,6 +23,8 @@ export async function GET(request) {
     const { from, to, failed, data } = await collect();
 
     // 덮어쓰기 전에 직전 수집본을 아카이브에 합친다. 어제까지 하던 전시가 여기서 남는다.
+    // 읽기에 실패하면 readBlob 이 던지고, 아래 catch 로 가서 아무것도 덮어쓰지 않는다.
+    // (실패를 '아카이브 없음'으로 치고 쓰면 그동안 쌓은 지난 전시가 통째로 지워진다.)
     const [previous, archive] = await Promise.all([readBlob(CACHE_PATH), readBlob(ARCHIVE_PATH)]);
     const nextArchive = mergeArchive(archive, previous, data);
 
